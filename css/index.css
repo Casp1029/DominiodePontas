@@ -3,7 +3,10 @@
   box-sizing: border-box; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  display: grid;
+  grid-template-rows: 200px 200px 200px 200px 200px 200px;
+  grid-template-columns: 1fr; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -25,5 +28,23 @@ img {
   display: block;
   max-width: 100%;
   height: auto; }
+
+header {
+  grid-row: 1; }
+
+.index {
+  grid-row: 2; }
+
+.products {
+  grid-row: 3; }
+
+.history {
+  grid-row: 4; }
+
+.about_us {
+  grid-row: 5; }
+
+.footer {
+  grid-row: 6; }
 
 /*# sourceMappingURL=index.css.map */
