@@ -7,6 +7,9 @@
 
 body {
   margin: 0; // Ingen kanter i siden af browser
+  display: grid;
+  grid-template-rows: 200px 200px 200px 200px 200px 200px;
+  grid-template-columns: 1fr;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,6 +38,32 @@ img {
   max-width: 100%; // Bredde må maks fylde 100%
   height: auto; // Højden skal tilpasse sig
 }
+
+header {
+  grid-row: 1;
+}
+
+.index {
+  grid-row: 2;
+}
+
+.products {
+  grid-row: 3;
+}
+
+.history {
+  grid-row: 4;
+}
+
+.about_us {
+  grid-row: 5;
+}
+
+.footer {
+  grid-row: 6;
+}
+
+
 
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
