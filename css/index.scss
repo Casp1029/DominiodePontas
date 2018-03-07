@@ -5,16 +5,25 @@
   box-sizing: border-box; // Bokse har altid den størrelse man giver uanset om der tilføjes margen mv.
 }
 
+$red: #781616;
+
 body {
   margin: 0; // Ingen kanter i siden af browser
   display: grid;
-  grid-template-rows: 200px 200px 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px auto 200px 200px;
   grid-template-columns: 1fr;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; // Ingen ydre margen fra overskrifter
   padding: 0; // Ingen indre margen fra overskrifter
+}
+
+h1 {
+  font-family: "Goudy Old Style", "Times New Roman", Serif;
+  color: white;
+  text-align: center;
+  font-size: 25pt;
 }
 
 ul, ol {
@@ -30,6 +39,9 @@ li {
 p {
   margin: 0; // Ingen ydre margen fra paragraffer
   padding: 0; // Ingen indre margen fra paragraffer
+  font-family: Arial, sans-serif;
+  font-size: 12pt;
+  line-height: 16pt;
 }
 
 // Sikrer billeder er responsive
@@ -51,11 +63,80 @@ header {
   grid-row: 3;
 }
 
-.history {
+//About us - Dominio de Pontas
+.about_us {
   grid-row: 4;
 }
 
-.about_us {
+.dominio-grid {
+  display: grid;
+  grid-template-rows: repeat(8, 80px);
+  grid-template-columns: repeat(14, 1fr);
+}
+
+.about_us img {
+  grid-row: 1 / span 8;
+  grid-column: 1 / span 14;
+  width:100%;
+  height:100%;
+}
+
+.dominio-grid h1 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 14;
+  margin-top: 45px;
+}
+
+.p-mobile {
+  grid-row: 2 / span 3;
+  grid-column: 2 / span 12;
+  color: white;
+  text-align: center;
+  margin-top: 45px;
+}
+
+* {box-sizing:border-box}
+
+// Slideshow container
+.slideshow-container {
+  grid-row: 5 / span 3;
+  grid-column: 2 / span 12;
+}
+
+// Hide the images by default
+.mySlides {
+  display: block;
+}
+
+// Next & previous buttons
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+}
+
+//Position "previous button"
+.prev {
+  grid-row: 6;
+  grid-column: 1 / span 2;
+}
+
+//Position "next button"
+.next {
+  grid-row: 6;
+  grid-column: 13 / span 2;
+}
+
+// On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: #d5d5d5;
+}
+
+.history {
   grid-row: 5;
 }
 
