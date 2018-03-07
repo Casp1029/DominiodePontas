@@ -5,10 +5,14 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 200px 200px 200px 200px 200px 200px;
+  grid-template-rows: 150px 500px auto 200px 200px 200px;
   grid-template-columns: 1fr; }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  display: block;
+  font-family: 'Playfair Display', serif; }
+
+h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
@@ -36,6 +40,23 @@ header {
   grid-row: 2; }
 
 .products {
+  grid-row: 3;
+  display: grid;
+  grid-template-rows: 50px auto auto auto; }
+
+.productsgrid {
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr; }
+
+.productscabernet {
+  grid-row: 1; }
+
+.productstempranillo {
+  grid-row: 2; }
+
+.productschardonnay {
   grid-row: 3; }
 
 .history {
