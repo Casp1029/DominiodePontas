@@ -5,10 +5,13 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 200px 200px 200px auto 200px 200px;
+
+  grid-template-rows: 150px 500px auto auto 200px 200px;
+
   grid-template-columns: 1fr; }
 
-h1, h2, h3, h4, h5, h6 {
+
+h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
@@ -44,8 +47,47 @@ header {
 .index {
   grid-row: 2; }
 
+//Casper start----------------------------------------------------------
+
 .products {
-  grid-row: 3; }
+  grid-row: 3;
+  display: grid;
+  grid-template-rows: 50px auto auto auto; }
+
+.productsgrid {
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr; }
+
+.productscabernet {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flaskecabernetsauvignont {
+  height: 500px; }
+
+.productstempranillo {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flasketempranillo {
+  height: 500px; }
+
+.productschardonnay {
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flaskechardonnaypng {
+  height: 500px; }
+
+//Sabine start-----------------------------------------------------------
 
 .about_us {
   grid-row: 4; }
@@ -103,8 +145,12 @@ header {
 .prev:hover, .next:hover {
   color: #d5d5d5; }
 
+//Oliver start-------------------------------------------------
+
 .history {
   grid-row: 5; }
+
+//Cecilie start-----------------------------------------------------------
 
 .footer {
   grid-row: 6; }
