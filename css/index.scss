@@ -68,9 +68,13 @@ $red: #781616;
   position: fixed;
   height:100%;
   width:100%;
+
 }
 
 .h_grid {
+  background-color: white;
+  height: 54px;
+  padding-top: 1px;
 }
 
 .h_logo {
@@ -119,6 +123,8 @@ nav {
   min-width: 80%;
   top: 40px;
   right: 0;
+  background-color: white;
+  outline: 5px auto #5d5d5d;
 
   a {
     color: black;
@@ -313,6 +319,8 @@ nav {
 .h_grid {
   display: grid;
   grid-template-columns: 1fr 5fr 4fr;
+  height: 130px;
+  padding-top: 0;
 }
 
 .h_logo {
@@ -364,6 +372,7 @@ nav {
   min-width: 0;
   top: 0;
   right: 0;
+  outline: 0px;
 
 }
 

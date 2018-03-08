@@ -5,11 +5,12 @@
 body {
   margin: 0;
   display: grid;
-
   grid-template-rows: 150px 500px auto auto 200px 200px;
-
   grid-template-columns: 1fr; }
 
+h1 {
+  display: block;
+  font-family: 'Playfair Display', serif; }
 
 h2, h3, h4, h5, h6 {
   margin: 0;
@@ -41,8 +42,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-//Oliver start------------------------------------------------------------------
-
 header {
   grid-row: 1; }
 
@@ -50,6 +49,11 @@ header {
   position: fixed;
   height: 100%;
   width: 100%; }
+
+.h_grid {
+  background-color: white;
+  height: 54px;
+  padding-top: 1px; }
 
 .h_logo {
   background: url("../images/Logo_roed.png") center no-repeat;
@@ -86,7 +90,9 @@ header {
   z-index: 1;
   min-width: 80%;
   top: 40px;
-  right: 0; }
+  right: 0;
+  background-color: white;
+  outline: 5px auto #5d5d5d; }
   .h_content a {
     color: black;
     padding: 10px;
@@ -106,12 +112,8 @@ header {
 .h_subscribe {
   display: none; }
 
-//Oliver Slut------------------------------------------------------------------
-
 .index {
   grid-row: 2; }
-
-//Casper start----------------------------------------------------------
 
 .products {
   grid-row: 3;
@@ -150,8 +152,6 @@ header {
 
 .flaskechardonnaypng {
   height: 500px; }
-
-//Sabine start-----------------------------------------------------------
 
 .about_us {
   grid-row: 4; }
@@ -212,14 +212,10 @@ header {
 .history {
   grid-row: 5; }
 
-
 .a_grid {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr; }
-
-//Cecilie start-----------------------------------------------------------
-
 
 .footer {
   grid-row: 6; }
@@ -227,7 +223,9 @@ header {
 @media screen and (min-width: 1200px) {
   .h_grid {
     display: grid;
-    grid-template-columns: 1fr 5fr 4fr; }
+    grid-template-columns: 1fr 5fr 4fr;
+    height: 130px;
+    padding-top: 0; }
 
   .h_logo {
     grid-row: 1;
@@ -269,7 +267,8 @@ header {
     z-index: 1;
     min-width: 0;
     top: 0;
-    right: 0; }
+    right: 0;
+    outline: 0px; }
 
   .h_content:hover {
     display: flex;
