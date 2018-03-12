@@ -5,21 +5,18 @@
 body {
   margin: 0;
   display: grid;
-
   grid-template-rows: 150px 500px auto auto 200px 200px;
-
   grid-template-columns: 1fr; }
 
+h1 {
+  font-family: "Goudy Old Style", "Times New Roman", Serif;
+  color: black;
+  text-align: center;
+  font-size: 25pt; }
 
 h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
-
-h1 {
-  font-family: "Goudy Old Style", "Times New Roman", Serif;
-  color: white;
-  text-align: center;
-  font-size: 25pt; }
 
 ul, ol {
   margin: 0;
@@ -30,11 +27,12 @@ li {
   margin: 0; }
 
 p {
-  margin: 0;
+  margin: 10px 10px 10px 10px;
   padding: 0;
   font-family: Arial, sans-serif;
   font-size: 12pt;
-  line-height: 16pt; }
+  line-height: 16pt;
+  text-align: center; }
 
 img {
   display: block;
@@ -47,8 +45,6 @@ header {
 .index {
   grid-row: 2; }
 
-//Casper start----------------------------------------------------------
-
 .products {
   grid-row: 3;
   display: grid;
@@ -60,34 +56,44 @@ header {
   grid-template-rows: auto auto auto auto;
   grid-template-columns: 1fr; }
 
+.productstext1 .productstext2 .productstext3 {
+  height: auto;
+  width: auto;
+  display: block; }
+
 .productscabernet {
   grid-row: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 60px; }
 
 .flaskecabernetsauvignont {
-  height: 500px; }
+  height: 500px;
+  margin-bottom: 25px; }
 
 .productstempranillo {
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 60px; }
 
 .flasketempranillo {
-  height: 500px; }
+  height: 500px;
+  margin-bottom: 25px; }
 
 .productschardonnay {
   grid-row: 3;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 60px; }
 
 .flaskechardonnaypng {
-  height: 500px; }
-
-//Sabine start-----------------------------------------------------------
+  height: 500px;
+  margin-bottom: 25px; }
 
 .about_us {
   grid-row: 4; }
@@ -106,7 +112,8 @@ header {
 .dominio-grid h1 {
   grid-row: 1 / span 1;
   grid-column: 1 / span 14;
-  margin-top: 45px; }
+  margin-top: 45px;
+  color: white; }
 
 .p-mobile {
   grid-row: 2 / span 3;
@@ -145,14 +152,93 @@ header {
 .prev:hover, .next:hover {
   color: #d5d5d5; }
 
-//Oliver start-------------------------------------------------
-
 .history {
   grid-row: 5; }
 
-//Cecilie start-----------------------------------------------------------
-
 .footer {
   grid-row: 6; }
+
+@media screen and (min-width: 992px) {
+  .products {
+    grid-row: 3;
+    display: grid;
+    grid-template-rows: 50px auto auto auto; }
+
+  .productsgrid {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr; }
+
+  /* HOVER OVER I CSS:
+    .productsgrid :hover {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    background-color: rgba(78, 16, 16, 0.85);
+    display: block;
+    position: absolute;
+  }
+  */
+  #productstext1 {
+    display: none; }
+
+  #productstext2 {
+    display: none; }
+
+  #productstext3 {
+    display: none; }
+
+  .productscabernet {
+    grid-row: 1;
+    grid-column: 1;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 60px; }
+
+  .productscabernet:hover #productstext1 {
+    grid-row: 1;
+    grid-column: 1;
+    height: auto;
+    width: auto;
+    display: flex;
+    background-color: rgba(78, 16, 16, 0.85);
+    position: absolute;
+    color: white;
+    text-align: left;
+    padding: 30px; }
+
+  .flaskecabernetsauvignont {
+    height: 500px;
+    margin-bottom: 25px; }
+
+  .productstempranillo {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 60px; }
+
+  .flasketempranillo {
+    height: 500px;
+    margin-bottom: 25px; }
+
+  .productschardonnay {
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 60px; }
+
+  .flaskechardonnaypng {
+    height: 500px;
+    margin-bottom: 25px; } }
 
 /*# sourceMappingURL=index.css.map */
