@@ -9,6 +9,9 @@
     <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
     <meta charset="utf-8">
 
+    <!-- Font awesome embed code !-->
+    <script src="https://use.fontawesome.com/1823101846.js"></script>
+
     <!-- Titel som ses oppe i browserens tab mv. -->
     <title>Domino de Pontas</title>
     <link rel="icon" href="favicon.png" type="image/x-icon">
@@ -29,12 +32,8 @@
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/index.css" rel="stylesheet" type="text/css">
 
-    <!--<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'> -->
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.css'>
-
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
 </head>
 
@@ -42,6 +41,54 @@
 <body>
 
 <header>
+    <div class="h_place">
+        <div class="h_grid">
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdown_btn">
+                        <i class="fa fa-bars fa-3x"></i>
+                    </button>
+
+                    <div class="h_help">
+                        <div class="h_content">
+
+                            <div class="h_menu1">
+                                <a href="">Vores vine</a>
+                            </div>
+
+                            <div class="h_menu2">
+                                <a href="">Stedet</a>
+                            </div>
+
+                            <div class="h_menu3">
+                                <a href="">Vores historie</a>
+                            </div>
+
+                            <div class="h_menu4">
+                                <a href="">Forhandlere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+            <div class="h_logo">
+            </div>
+            <div class="h_subscribe">
+
+                <div class="sub">
+                    <button class="sub_button">
+                        Tilmeld nyhedsbrev
+                    </button>
+                </div>
+
+                <div class="h_placeholder">
+                    <input type="email" placeholder="e-mail">
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </header>
 
@@ -104,7 +151,7 @@
 
 <section class="about_us">
     <div class="dominio-grid">
-        <img src="images/DominiodePontas_bg_overlay.jpg">
+        <img src="images/DominiodePontas_bg_overlay.jpg" alt="">
             <h1>Dominio de Pontas</h1>
             <div class="p-mobile">
                 <p>Beliggende i det solrige Spanien, i det nordlige område Navarra, som er en region rig på historie og giver Dominio de Pontas vingården en speciel stemning. Noget specielt for Navarra regionen er, at området har ret til at løsrive sig fra Spanien og gå med til en Baskisk stat hvis en sådan skulle blive oprettet.</p>
@@ -114,29 +161,65 @@
         <div class="slideshow-container">
 
             <!-- Full-width images -->
-            <div class="mySlides">
-                <img src="images/slide1.jpeg" style="width:100%">
+            <div class="slides">
+                <div class="overlay">
+                <img src="images/slide1.jpeg" alt="">
+                </div>
             </div>
 
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)"></a>
-            <a class="next" onclick="plusSlides(1)"></a>
+            <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-angle-left"></i></a>
+            <a class="next" onclick="plusSlides(1)"><i class="fas fa-angle-right"></i></a>
         </div>
     </div>
 </section>
 
 
-<section class="history">
 
+<section class="about_us">
+    <div class="a_grid">
+        <div class="a_title"></div>
+        <div class="a_pics"></div>
+        <div class="a_text"></div>
+    </div>
+</section>
+
+<section class="history">
+    <div class="his_grid">
+        <div class="his_head">
+            <h1>Vores Historie</h1>
+        </div>
+
+        <div class="his_pic_flex">
+            <div class="his_pic1"></div>
+            <div class="his_pic2"></div>
+            <div class="his_pic3"></div>
+        </div>
+
+        <div class="his_text_flex">
+            <div class="his_help">
+
+                <div class="his_text1">
+                    <p>Dominio de Pontas vingården blev i 2013 opkøbt og har siden været i danske hænder. Selve Dominio de Pontas vingården har dog en del flere år på bagen og blev grundlagt i 1876 af Juan Pontas, og har siden skiftet ejere en del gange.
+                        Det er passionen for vin og vinbrygning der har drevet de nye danske ejere til at overtage vingården i Spanien.
+                    </p>
+                </div>
+
+                <br>
+
+                <div class="his_text2">
+                    <p>Vi har et ønske om, og brænder for at fører de udsøgte vine fra Dominio de Pontas, til det danske (og udenlandske) marked, så de kan blive værdsat for den høje kvalitet de har fået fra druerne fra den gamle vingård i Navarra, som Juan Pontas grundlagde for over 100 år siden.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
 <footer>
 
 </footer>
-
-
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -156,6 +239,7 @@
 
     </script>
 -->
+
 </body>
 
 
