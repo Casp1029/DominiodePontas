@@ -6,15 +6,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: 150px 500px auto auto auto 200px;
-  grid-template-columns: 1fr;
-}
-
-h1 {
-  font-family: "Goudy Old Style", "Times New Roman", Serif;
-  color: black;
-  text-align: center;
-  font-size: 25pt;
-}
+  grid-template-columns: 1fr; }
 
 h2, h3, h4, h5, h6 {
   margin: 0;
@@ -26,6 +18,10 @@ h1 {
   font-size: 25pt;
   font-weight: normal; }
 
+h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
 ul, ol {
   margin: 0;
   padding: 0;
@@ -35,13 +31,12 @@ li {
   margin: 0; }
 
 p {
-  margin: 0;
+  margin: 10px 10px 10px 10px;
   padding: 0;
   font-family: Arial, sans-serif;
   font-size: 12pt;
-  line-height: 16pt; 
-}
-
+  line-height: 16pt;
+  text-align: center; }
 
 img {
   display: block;
@@ -99,18 +94,20 @@ header {
   right: 0;
   background-color: white;
   outline: 5px auto #5d5d5d; }
-  .h_content a {
-    color: black;
-    padding: 10px;
-    margin: auto;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    display: block;
-    font-family: "Goudy Old Style"; }
-  .h_content a:hover {
-    color: #781616;
-    font-weight: bold; }
+
+.h_content a {
+  color: black;
+  padding: 10px;
+  margin: auto;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  font-family: "Goudy Old Style", Times New Roman; }
+
+.h_content a:hover {
+  color: #781616;
+  font-weight: bold; }
 
 .dropdown:hover .h_content {
   display: block; }
@@ -124,23 +121,18 @@ header {
 .products {
   grid-row: 3;
   display: grid;
-  grid-template-rows: 50px auto auto auto;
-}
-
+  grid-template-rows: 50px auto auto auto; }
 
 .productsgrid {
   grid-row: 2;
   display: grid;
   grid-template-rows: auto auto auto auto;
-  grid-template-columns: 1fr;
-}
+  grid-template-columns: 1fr; }
 
 .productstext1 .productstext2 .productstext3 {
   height: auto;
   width: auto;
-  display: block;
-}
-
+  display: block; }
 
 .productscabernet {
   grid-row: 1;
@@ -148,39 +140,34 @@ header {
   flex-direction: column;
   align-items: center;
   margin-top: 70px;
-  margin-bottom: 60px;
-}
+  margin-bottom: 60px; }
 
 .flaskecabernetsauvignont {
   height: 500px;
-  margin-bottom: 25px;
-}
+  margin-bottom: 25px; }
 
 .productstempranillo {
   grid-row: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
-}
+  margin-bottom: 60px; }
 
 .flasketempranillo {
   height: 500px;
-  margin-bottom: 25px;
-}
+  margin-bottom: 25px; }
 
 .productschardonnay {
   grid-row: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
-}
+  margin-bottom: 60px; }
 
 .flaskechardonnaypng {
   height: 500px;
-  margin-bottom: 25px;
-}
+  margin-bottom: 25px; }
+
 
 .about_us {
   grid-row: 4; }
@@ -215,8 +202,6 @@ header {
 .slides {
   display: block; }
 
-//Oliver start ------------------------------------------------------------------------
-
 .history {
   grid-row: 5; }
 
@@ -225,50 +210,37 @@ header {
   grid-template-columns: 20px 1fr 20px;
   grid-template-rows: 80px 115px 2fr;
   height: 100%;
-  width: 100%;
-}
+  width: 100%; }
 
 .his_head {
   grid-column: 2;
-  grid-row: 1;
-
-  h1 {
-    color: #000000;
-  }
-}
+  grid-row: 1; }
+  .his_head h1 {
+    color: #000000; }
 
 .his_pic_flex {
   grid-column: 2;
   grid-row: 2;
   display: flex;
-  justify-content: space-evenly;
-}
+  justify-content: space-evenly; }
 
 .his_pic1, .his_pic2, .his_pic3 {
-  background: url("../images/Mobile.jpg") center  no-repeat;
+  background: url("../images/Mobile.jpg") center no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
-  margin: auto 3px auto 3px;
-}
-
+  margin: auto 3px auto 3px; }
 
 .his_text_flex {
   grid-column: 2;
-  grid-row: 3;
-}
+  grid-row: 3; }
 
 .his_text1, .his_text2 {
-  margin-top: 12px;
-
-  p {
+  margin-top: 12px; }
+  .his_text1 p, .his_text2 p {
     font-family: Arial;
     font-size: 15px;
-    text-align: center;
-  }
-}
-
-//Oliver slut ------------------------------------------------------------------------
+    text-align: center; }
 
 .a_grid {
   display: grid;
@@ -278,6 +250,61 @@ header {
 .footer {
   grid-row: 6; }
 
+/*Fejl-404-side*/
+.error-page {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: repeat(6, 1fr); }
+
+.error-page h1 {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 4;
+  color: #781616;
+  text-align: center;
+  font-size: 100px;
+  margin: 30px 0 0 0; }
+
+.error-page h3 {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 4;
+  text-align: center;
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 20px; }
+
+.error {
+  grid-row: 3 / span 2;
+  grid-column: 1 / span 6; }
+
+.error-page p {
+  grid-row: 5 / span 1;
+  grid-column: 2 / span 4;
+  text-align: center;
+  margin-top: 25px; }
+
+.error-button {
+  grid-row: 6 / span 1;
+  grid-column: 2 / span 4;
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  background-color: #781616;
+  border-radius: 2px;
+  border: none;
+  width: 170px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 8px; }
+
+.error-button:hover {
+  background-color: #9a3d3d; }
+
+.error-page a {
+  text-decoration: none;
+  color: white; }
+
+/*Stående tablet*/
 @media screen and (min-width: 768px) {
   .p-mobile {
     grid-row: 6 / span 2;
@@ -286,156 +313,29 @@ header {
 
   .slideshow-container {
     grid-row: 3 / span 3;
-    grid-column: 2 / span 6; } }
+    grid-column: 2 / span 6; }
 
-@media screen and (min-width: 992px) {
-  .slideshow-container {
+  /*Fejl-404-side*/
+  .error {
+    grid-row: 3 / span 2;
     grid-column: 2 / span 4; } }
 
-@media screen and (min-width: 1200px) {
-  h1 {
-    font-size: 46pt; }
-
-//Oliver start ----------------------------------------------------------------------------------
-body {
-  grid-template-rows: 150px 500px auto auto 450px 200px;
-}
-
-  .h_place {
-}
-  .dominio-grid h1 {
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 14; }
-
-
-  .slideshow-container {
-    grid-column: 2 / span 3; }
-
-   .h_grid {
-    display: grid;
-    grid-template-columns: 1fr 5fr 4fr;
-    height: 130px;
-    padding-top: 0; }
-  
-.h_logo {
-  grid-row: 1;
-  grid-column: 1;
-  background: url(../images/Logo_roed.png) center no-repeat;
-  background-size: cover;
-  height: 120px;
-  width: 200px;
-  margin: 6px 0 0 2px;
-}
-
-nav {
-  grid-column: 2;
-}
-
-.dropdown {
-  position: relative;
-}
-
-
-.fa-bars {
-  color: $red;
-}
-
-.dropdown_btn {
-  display: none;
-  position: absolute;
-  border: none;
-  outline: none;
-  background-color: inherit;
-  font-family: inherit;
-  right: 12px;
-  top: 1px;
-}
-
-.dropdown:hover .h_content{
-  display: flex;
-}
-
-.h_content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 40px;
-
-  position: static;
-  z-index: 1;
-  min-width: 0;
-  top: 0;
-  right: 0;
-  outline: 0;
-
-}
-
-.h_content:hover {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 40px;
-
-  position: static;
-  z-index: 1;
-  min-width: 0;
-  top: 0;
-  right: 0;
-}
-
-.h_subscribe {
-  grid-column: 3;
-  display: flex;
-  margin-top: 47px;
-  justify-content: center;
-}
-
-.sub {
-
-}
-
-.sub_button {
-  text-align: center;
-  font-family: Arial;
-  color: white;
-  background-color: #781616;
-  border-radius: 2px;
-  border: none;
-  width: 150px;
-  height: 30px;
-  margin-right: 15px;
-}
-
-.sub_button:hover {
-  cursor: pointer;
-  background-color:  #9a3d3d;
-}
-
-.h_placeholder {
-  height: 30px;
-  width: 300px;
-  outline: 5px auto #5d5d5d;
-}
-
-
+/*Liggende tablet*/
 @media screen and (min-width: 992px) {
-  // Alt der ændres i tablet liggende fra mobil og tablet stående
-
-  //Casper start-----------------------------------------------
+  .slideshow-container {
+    grid-column: 2 / span 4; } 
+    grid-column: 2 / span 4; } 
 
   .products {
     grid-row: 3;
     display: grid;
-    grid-template-rows: 50px auto auto auto;
-  }
+    grid-template-rows: 50px auto auto auto; }
 
   .productsgrid {
     grid-row: 2;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
+    grid-template-columns: 1fr 1fr 1fr; }
 
   /* HOVER OVER I CSS:
     .productsgrid :hover {
@@ -447,18 +347,14 @@ nav {
     position: absolute;
   }
   */
-
   #productstext1 {
-    display: none;
-  }
+    display: none; }
 
   #productstext2 {
-    display: none;
-  }
+    display: none; }
 
   #productstext3 {
-    display: none;
-  }
+    display: none; }
 
   .productscabernet {
     grid-row: 1;
@@ -468,8 +364,7 @@ nav {
     display: flex;
     flex-direction: column;
     margin-top: 70px;
-    margin-bottom: 60px;
-  }
+    margin-bottom: 60px; }
 
   .productscabernet:hover #productstext1 {
     grid-row: 1;
@@ -481,16 +376,11 @@ nav {
     position: absolute;
     color: white;
     text-align: left;
-    padding: 30px;
-  }
-
+    padding: 30px; }
 
   .flaskecabernetsauvignont {
     height: 500px;
-    margin-bottom: 25px;
-  }
-
-
+    margin-bottom: 25px; }
 
   .productstempranillo {
     grid-row: 1;
@@ -499,16 +389,11 @@ nav {
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
-    margin-bottom: 60px;
-  }
-
-
+    margin-bottom: 60px; }
 
   .flasketempranillo {
     height: 500px;
-    margin-bottom: 25px;
-  }
-
+    margin-bottom: 25px; }
 
   .productschardonnay {
     grid-row: 1;
@@ -517,89 +402,181 @@ nav {
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
-    margin-bottom: 60px;
-
-  }
+    margin-bottom: 60px; }
 
   .flaskechardonnaypng {
     height: 500px;
-    margin-bottom: 25px;
-  }
-  
-input {
-  width: 100%;
-  height: 100%;
-  background-color: #d5d5d5;
-  color: #000000;
-  padding-left: 5px;
-  border: 0;
-  -webkit-appearance: none
+    margin-bottom: 25px; } 
 }
 
-  .his_grid {
+/*Computerskærm*/
+@media screen and (min-width: 1200px) {
+    body {
+    grid-template-rows: 150px 500px auto auto 450px 200px; }
+  
+  h1 {
+    font-size: 46pt; }
+
+  .dominio-grid h1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 14; }
+
+  .h_grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr;
+    height: 130px;
+    padding-top: 0; }
+
+  .h_logo {
+    grid-row: 1;
+    grid-column: 1;
+    background: url(../images/Logo_roed.png) center no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 200px;
+    margin: 6px 0 0 2px; }
+
+  nav {
+    grid-column: 2; }
+
+  .dropdown {
+    position: relative; }
+
+  .fa-bars {
+    color: #781616; }
+
+  .dropdown_btn {
+    display: none;
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    right: 12px;
+    top: 1px; }
+
+  .dropdown:hover .h_content {
+    display: flex; }
+
+  .h_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    position: static;
+    z-index: 1;
+    min-width: 0;
+    top: 0;
+    right: 0;
+    outline: 0; }
+
+  .h_content:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    position: static;
+    z-index: 1;
+    min-width: 0;
+    top: 0;
+    right: 0; }
+
+  .h_subscribe {
+    grid-column: 3;
+    display: flex;
+    margin-top: 47px;
+    justify-content: center; }
+
+  .sub_button {
+    text-align: center;
+    font-family: Arial;
+    color: white;
+    background-color: #781616;
+    border-radius: 2px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    margin-right: 15px; }
+
+  .sub_button:hover {
+    cursor: pointer;
+    background-color: #9a3d3d; }
+
+  .h_placeholder {
+    height: 30px;
+    width: 300px;
+    outline: 5px auto #5d5d5d; }
+
+  input {
+    width: 100%;
+    height: 100%;
+    background-color: #d5d5d5;
+    color: #000000;
+    padding-left: 5px;
+    border: 0;
+    -webkit-appearance: none; }
+
+  .slideshow-container {
+    grid-column: 2 / span 3; }
+
+  .p-mobile {
+    grid-column: 4 / span 8; } }
+
+/*Fejl-404-side*/
+  .error-page h1 {
+    font-size: 120px;
+    margin: 50px 0 0 0; }
+
+  .error-page h3 {
+    font-size: 25px;
+    margin-bottom: 0; }
+
+  .error-page p {
+    margin-top: 0; }
+
+  .error {
+    grid-row: 3 / span 2;
+    grid-column: 3 / span 3; } }
+/*# sourceMappingURL=index.css.map */
+
+.his_grid {
     display: grid;
     grid-template-columns: 92px 1fr 92px;
     grid-template-rows: 80px 1fr 2fr;
     height: 100%;
-    width: 100%;
-  }
-
+    width: 100%; }
 
   .his_head {
     grid-column: 2;
-    grid-row: 1;
-
-    h1 {
-      color: #000000;
-    }
-  }
+    grid-row: 1; }
+    .his_head h1 {
+      color: #000000; }
 
   .his_help {
     display: grid;
     grid-template-rows: 0;
     grid-template-columns: 1fr 1fr;
     height: 100%;
-    width: 100%;
-  }
+    width: 100%; }
 
   .his_text1, .his_text2 {
-    margin: 12px;
-  }
+    margin: 12px; }
 
   .his_text1 {
-    grid-column: 1;
-
-  }
+    grid-column: 1; }
 
   .his_text2 {
-    grid-column: 2;
-  }
+    grid-column: 2; }
 
   .his_pic_flex {
     grid-column: 2;
     grid-row: 3;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 25px;
-  }
+    margin-top: 25px; }
 
   .his_text_flex {
     grid-column: 2;
-    grid-row: 2;
-  }
+    grid-row: 2; } }
 
-
-
-//Oliver slut -------------------------------------------------------------------------------------
-
-//slutparentes
-  
-  .p-mobile {
-    grid-column: 4 / span 8; } }
-}
-
-
-@media print {
-  // Alt der gælder for print specifikt
-}
-
+/*# sourceMappingURL=index.css.map */

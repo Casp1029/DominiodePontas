@@ -94,18 +94,20 @@ header {
   right: 0;
   background-color: white;
   outline: 5px auto #5d5d5d; }
-  .h_content a {
-    color: black;
-    padding: 10px;
-    margin: auto;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    display: block;
-    font-family: "Goudy Old Style"; }
-  .h_content a:hover {
-    color: #781616;
-    font-weight: bold; }
+
+.h_content a {
+  color: black;
+  padding: 10px;
+  margin: auto;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  font-family: "Goudy Old Style", Times New Roman; }
+
+.h_content a:hover {
+  color: #781616;
+  font-weight: bold; }
 
 .dropdown:hover .h_content {
   display: block; }
@@ -248,6 +250,61 @@ header {
 .footer {
   grid-row: 6; }
 
+/*Fejl-404-side*/
+.error-page {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: repeat(6, 1fr); }
+
+.error-page h1 {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 4;
+  color: #781616;
+  text-align: center;
+  font-size: 100px;
+  margin: 30px 0 0 0; }
+
+.error-page h3 {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 4;
+  text-align: center;
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 20px; }
+
+.error {
+  grid-row: 3 / span 2;
+  grid-column: 1 / span 6; }
+
+.error-page p {
+  grid-row: 5 / span 1;
+  grid-column: 2 / span 4;
+  text-align: center;
+  margin-top: 25px; }
+
+.error-button {
+  grid-row: 6 / span 1;
+  grid-column: 2 / span 4;
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  background-color: #781616;
+  border-radius: 2px;
+  border: none;
+  width: 170px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 8px; }
+
+.error-button:hover {
+  background-color: #9a3d3d; }
+
+.error-page a {
+  text-decoration: none;
+  color: white; }
+
+/*Stående tablet*/
 @media screen and (min-width: 768px) {
   .p-mobile {
     grid-row: 6 / span 2;
@@ -256,10 +313,17 @@ header {
 
   .slideshow-container {
     grid-row: 3 / span 3;
-    grid-column: 2 / span 6; } }
+    grid-column: 2 / span 6; }
 
+  /*Fejl-404-side*/
+  .error {
+    grid-row: 3 / span 2;
+    grid-column: 2 / span 4; } }
+
+/*Liggende tablet*/
 @media screen and (min-width: 992px) {
   .slideshow-container {
+    grid-column: 2 / span 4; } 
     grid-column: 2 / span 4; } 
 
   .products {
@@ -345,23 +409,17 @@ header {
     margin-bottom: 25px; } 
 }
 
+/*Computerskærm*/
 @media screen and (min-width: 1200px) {
+    body {
+    grid-template-rows: 150px 500px auto auto 450px 200px; }
+  
   h1 {
     font-size: 46pt; }
 
   .dominio-grid h1 {
     grid-row: 1 / span 2;
     grid-column: 1 / span 14; }
-
-  .slideshow-container {
-    grid-column: 2 / span 3; }
-
-  .p-mobile {
-    grid-column: 4 / span 8; } }
-
-@media screen and (min-width: 1200px) {
-  body {
-    grid-template-rows: 150px 500px auto auto 450px 200px; }
 
   .h_grid {
     display: grid;
@@ -458,7 +516,30 @@ header {
     border: 0;
     -webkit-appearance: none; }
 
-  .his_grid {
+  .slideshow-container {
+    grid-column: 2 / span 3; }
+
+  .p-mobile {
+    grid-column: 4 / span 8; } }
+
+/*Fejl-404-side*/
+  .error-page h1 {
+    font-size: 120px;
+    margin: 50px 0 0 0; }
+
+  .error-page h3 {
+    font-size: 25px;
+    margin-bottom: 0; }
+
+  .error-page p {
+    margin-top: 0; }
+
+  .error {
+    grid-row: 3 / span 2;
+    grid-column: 3 / span 3; } }
+/*# sourceMappingURL=index.css.map */
+
+.his_grid {
     display: grid;
     grid-template-columns: 92px 1fr 92px;
     grid-template-rows: 80px 1fr 2fr;
@@ -497,6 +578,5 @@ header {
   .his_text_flex {
     grid-column: 2;
     grid-row: 2; } }
-
 
 /*# sourceMappingURL=index.css.map */
