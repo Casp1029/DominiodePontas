@@ -8,6 +8,12 @@ body {
   grid-template-rows: 150px 500px auto auto auto 200px;
   grid-template-columns: 1fr; }
 
+h1 {
+  font-family: "Goudy Old Style", "Times New Roman", Serif;
+  color: black;
+  text-align: center;
+  font-size: 25pt; }
+
 h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
@@ -18,10 +24,6 @@ h1 {
   font-size: 25pt;
   font-weight: normal; }
 
-h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0; }
-
 ul, ol {
   margin: 0;
   padding: 0;
@@ -31,12 +33,11 @@ li {
   margin: 0; }
 
 p {
-  margin: 10px 10px 10px 10px;
+  margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   font-size: 12pt;
-  line-height: 16pt;
-  text-align: center; }
+  line-height: 16pt; }
 
 img {
   display: block;
@@ -167,7 +168,6 @@ header {
 .flaskechardonnaypng {
   height: 500px;
   margin-bottom: 25px; }
-
 
 .about_us {
   grid-row: 4; }
@@ -406,8 +406,26 @@ header {
 
   .flaskechardonnaypng {
     height: 500px;
-    margin-bottom: 25px; } 
-}
+    margin-bottom: 25px; }
+
+  .slideshow-container {
+    grid-column: 2 / span 4; }
+
+  input {
+    width: 100%;
+    height: 100%;
+    background-color: #d5d5d5;
+    color: #000000;
+    padding-left: 5px;
+    border: 0;
+    -webkit-appearance: none; }
+
+  .his_grid {
+    display: grid;
+    grid-template-columns: 92px 1fr 92px;
+    grid-template-rows: 80px 1fr 2fr;
+    height: 100%;
+    width: 100%; }
 
 /*Computerskærm*/
 @media screen and (min-width: 1200px) {
@@ -416,6 +434,9 @@ header {
   
   h1 {
     font-size: 46pt; }
+
+  body {
+    grid-template-rows: 150px 500px auto auto 450px 200px; }
 
   .dominio-grid h1 {
     grid-row: 1 / span 2;
@@ -578,5 +599,6 @@ header {
   .his_text_flex {
     grid-column: 2;
     grid-row: 2; } }
+
 
 /*# sourceMappingURL=index.css.map */

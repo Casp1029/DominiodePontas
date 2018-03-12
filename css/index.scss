@@ -118,6 +118,9 @@ header {
 .index {
   grid-row: 2; }
 
+
+//Casper start--------------------------------------------------------
+
 .products {
   grid-row: 3;
   display: grid;
@@ -168,6 +171,8 @@ header {
   height: 500px;
   margin-bottom: 25px; }
 
+
+//Casper slut-------------------------------------------------------------------------
 
 .about_us {
   grid-row: 4; }
@@ -324,7 +329,6 @@ header {
 @media screen and (min-width: 992px) {
   .slideshow-container {
     grid-column: 2 / span 4; } 
-    grid-column: 2 / span 4; } 
 
   .products {
     grid-row: 3;
@@ -406,8 +410,11 @@ header {
 
   .flaskechardonnaypng {
     height: 500px;
-    margin-bottom: 25px; } 
-}
+    margin-bottom: 25px;
+  }
+
+  //Casper slut-----------------------------------------
+
 
 /*Computerskærm*/
 @media screen and (min-width: 1200px) {
@@ -515,6 +522,7 @@ header {
     padding-left: 5px;
     border: 0;
     -webkit-appearance: none; }
+  
 
   .slideshow-container {
     grid-column: 2 / span 3; }
@@ -578,5 +586,6 @@ header {
   .his_text_flex {
     grid-column: 2;
     grid-row: 2; } }
+
 
 /*# sourceMappingURL=index.css.map */
