@@ -5,7 +5,7 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 150px 500px auto auto 200px 200px;
+  grid-template-rows: 150px 500px auto auto auto 200px;
   grid-template-columns: 1fr; }
 
 h2, h3, h4, h5, h6 {
@@ -185,6 +185,43 @@ header {
 .history {
   grid-row: 5; }
 
+.his_grid {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: 80px 115px 2fr;
+  height: 100%;
+  width: 100%; }
+
+.his_head {
+  grid-column: 2;
+  grid-row: 1; }
+  .his_head h1 {
+    color: #000000; }
+
+.his_pic_flex {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-evenly; }
+
+.his_pic1, .his_pic2, .his_pic3 {
+  background: url("../images/Mobile.jpg") center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  margin: auto 3px auto 3px; }
+
+.his_text_flex {
+  grid-column: 2;
+  grid-row: 3; }
+
+.his_text1, .his_text2 {
+  margin-top: 12px; }
+  .his_text1 p, .his_text2 p {
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center; }
+
 .a_grid {
   display: grid;
   grid-template-rows: 1fr;
@@ -222,6 +259,9 @@ header {
     grid-column: 4 / span 8; } }
 
 @media screen and (min-width: 1200px) {
+  body {
+    grid-template-rows: 150px 500px auto auto 450px 200px; }
+
   .h_grid {
     display: grid;
     grid-template-columns: 1fr 5fr 4fr;
@@ -269,7 +309,7 @@ header {
     min-width: 0;
     top: 0;
     right: 0;
-    outline: 0px; }
+    outline: 0; }
 
   .h_content:hover {
     display: flex;
@@ -315,6 +355,46 @@ header {
     color: #000000;
     padding-left: 5px;
     border: 0;
-    -webkit-appearance: none; } }
+    -webkit-appearance: none; }
+
+  .his_grid {
+    display: grid;
+    grid-template-columns: 92px 1fr 92px;
+    grid-template-rows: 80px 1fr 2fr;
+    height: 100%;
+    width: 100%; }
+
+  .his_head {
+    grid-column: 2;
+    grid-row: 1; }
+    .his_head h1 {
+      color: #000000; }
+
+  .his_help {
+    display: grid;
+    grid-template-rows: 0;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%; }
+
+  .his_text1, .his_text2 {
+    margin: 12px; }
+
+  .his_text1 {
+    grid-column: 1; }
+
+  .his_text2 {
+    grid-column: 2; }
+
+  .his_pic_flex {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px; }
+
+  .his_text_flex {
+    grid-column: 2;
+    grid-row: 2; } }
 
 /*# sourceMappingURL=index.css.map */

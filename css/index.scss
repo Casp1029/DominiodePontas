@@ -5,8 +5,14 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 150px 500px auto auto 200px 200px;
-  grid-template-columns: 1fr; }
+  grid-template-rows: 150px 500px auto auto auto 200px;
+  grid-template-columns: 1fr;
+}
+
+h1 {
+  display: block;
+  font-family: 'Playfair Display', serif;
+}
 
 h2, h3, h4, h5, h6 {
   margin: 0;
@@ -182,8 +188,60 @@ header {
 .slides {
   display: block; }
 
+//Oliver start ------------------------------------------------------------------------
+
 .history {
   grid-row: 5; }
+
+.his_grid {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: 80px 115px 2fr;
+  height: 100%;
+  width: 100%;
+}
+
+.his_head {
+  grid-column: 2;
+  grid-row: 1;
+
+  h1 {
+    color: #000000;
+  }
+}
+
+.his_pic_flex {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.his_pic1, .his_pic2, .his_pic3 {
+  background: url("../images/Mobile.jpg") center  no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  margin: auto 3px auto 3px;
+}
+
+
+.his_text_flex {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.his_text1, .his_text2 {
+  margin-top: 12px;
+
+  p {
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+//Oliver slut ------------------------------------------------------------------------
 
 .a_grid {
   display: grid;
@@ -211,110 +269,202 @@ header {
   h1 {
     font-size: 46pt; }
 
+//Oliver start ----------------------------------------------------------------------------------
+body {
+  grid-template-rows: 150px 500px auto auto 450px 200px;
+}
+
+  .h_place {
+}
   .dominio-grid h1 {
     grid-row: 1 / span 2;
     grid-column: 1 / span 14; }
 
+
   .slideshow-container {
     grid-column: 2 / span 3; }
 
-  .p-mobile {
-    grid-column: 4 / span 8; } }
-
-@media screen and (min-width: 1200px) {
-  .h_grid {
+   .h_grid {
     display: grid;
     grid-template-columns: 1fr 5fr 4fr;
     height: 130px;
     padding-top: 0; }
+  
+.h_logo {
+  grid-row: 1;
+  grid-column: 1;
+  background: url(../images/Logo_roed.png) center no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 200px;
+  margin: 6px 0 0 2px;
+}
 
-  .h_logo {
-    grid-row: 1;
-    grid-column: 1;
-    background: url(../images/Logo_roed.png) center no-repeat;
-    background-size: cover;
-    height: 120px;
-    width: 200px;
-    margin: 6px 0 0 2px; }
+nav {
+  grid-column: 2;
+}
 
-  nav {
-    grid-column: 2; }
+.dropdown {
+  position: relative;
+}
 
-  .dropdown {
-    position: relative; }
 
-  .fa-bars {
-    color: #781616; }
+.fa-bars {
+  color: $red;
+}
 
-  .dropdown_btn {
-    display: none;
-    position: absolute;
-    border: none;
-    outline: none;
-    background-color: inherit;
-    font-family: inherit;
-    right: 12px;
-    top: 1px; }
+.dropdown_btn {
+  display: none;
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  right: 12px;
+  top: 1px;
+}
 
-  .dropdown:hover .h_content {
-    display: flex; }
+.dropdown:hover .h_content{
+  display: flex;
+}
 
-  .h_content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 40px;
-    position: static;
-    z-index: 1;
-    min-width: 0;
-    top: 0;
-    right: 0;
-    outline: 0px; }
+.h_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
 
-  .h_content:hover {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 40px;
-    position: static;
-    z-index: 1;
-    min-width: 0;
-    top: 0;
-    right: 0; }
+  position: static;
+  z-index: 1;
+  min-width: 0;
+  top: 0;
+  right: 0;
+  outline: 0;
 
-  .h_subscribe {
-    grid-column: 3;
-    display: flex;
-    margin-top: 47px;
-    justify-content: center; }
+}
 
-  .sub_button {
-    text-align: center;
-    font-family: Arial;
-    color: white;
-    background-color: #781616;
-    border-radius: 2px;
-    border: none;
-    width: 150px;
-    height: 30px;
-    margin-right: 15px; }
+.h_content:hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
 
-  .sub_button:hover {
-    cursor: pointer;
-    background-color: #9a3d3d; }
+  position: static;
+  z-index: 1;
+  min-width: 0;
+  top: 0;
+  right: 0;
+}
 
-  .h_placeholder {
-    height: 30px;
-    width: 300px;
-    outline: 5px auto #5d5d5d; }
+.h_subscribe {
+  grid-column: 3;
+  display: flex;
+  margin-top: 47px;
+  justify-content: center;
+}
 
-  input {
-    width: 100%;
+.sub {
+
+}
+
+.sub_button {
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  background-color: #781616;
+  border-radius: 2px;
+  border: none;
+  width: 150px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.sub_button:hover {
+  cursor: pointer;
+  background-color:  #9a3d3d;
+}
+
+.h_placeholder {
+  height: 30px;
+  width: 300px;
+  outline: 5px auto #5d5d5d;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  background-color: #d5d5d5;
+  color: #000000;
+  padding-left: 5px;
+  border: 0;
+  -webkit-appearance: none
+
+}
+
+  .his_grid {
+    display: grid;
+    grid-template-columns: 92px 1fr 92px;
+    grid-template-rows: 80px 1fr 2fr;
     height: 100%;
-    background-color: #d5d5d5;
-    color: #000000;
-    padding-left: 5px;
-    border: 0;
-    -webkit-appearance: none; } }
+    width: 100%;
+  }
 
-/*# sourceMappingURL=index.css.map */
+
+  .his_head {
+    grid-column: 2;
+    grid-row: 1;
+
+    h1 {
+      color: #000000;
+    }
+  }
+
+  .his_help {
+    display: grid;
+    grid-template-rows: 0;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+  }
+
+  .his_text1, .his_text2 {
+    margin: 12px;
+  }
+
+  .his_text1 {
+    grid-column: 1;
+
+  }
+
+  .his_text2 {
+    grid-column: 2;
+  }
+
+  .his_pic_flex {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+  }
+
+  .his_text_flex {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+
+
+//Oliver slut -------------------------------------------------------------------------------------
+
+//slutparentes
+  
+  .p-mobile {
+    grid-column: 4 / span 8; } }
+}
+
+
+@media print {
+  // Alt der gælder for print specifikt
+}
+
