@@ -2,12 +2,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-$red: #781616;
-
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 150px 500px auto auto 200px 200px;
+  grid-template-rows: 150px 500px auto auto auto 200px;
   grid-template-columns: 1fr; }
 
 h2, h3, h4, h5, h6 {
@@ -20,6 +18,10 @@ h1 {
   font-size: 25pt;
   font-weight: normal; }
 
+h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
 ul, ol {
   margin: 0;
   padding: 0;
@@ -29,11 +31,12 @@ li {
   margin: 0; }
 
 p {
-  margin: 0;
+  margin: 10px 10px 10px 10px;
   padding: 0;
   font-family: Arial, sans-serif;
   font-size: 12pt;
-  line-height: 16pt; }
+  line-height: 16pt;
+  text-align: center; }
 
 img {
   display: block;
@@ -68,7 +71,7 @@ header {
   position: relative; }
 
 .fa-bars {
-  color: $red; }
+  color: #781616; }
 
 .dropdown_btn {
   position: absolute;
@@ -92,19 +95,19 @@ header {
   background-color: white;
   outline: 5px auto #5d5d5d; }
 
-  .h_content a {
-    color: black;
-    padding: 10px;
-    margin: auto;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    display: block;
-    font-family: "Goudy Old Style", Times New Roman; }
+.h_content a {
+  color: black;
+  padding: 10px;
+  margin: auto;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  font-family: "Goudy Old Style", Times New Roman; }
 
-  .h_content a:hover {
-    color: $red;
-    font-weight: bold; }
+.h_content a:hover {
+  color: #781616;
+  font-weight: bold; }
 
 .dropdown:hover .h_content {
   display: block; }
@@ -126,32 +129,45 @@ header {
   grid-template-rows: auto auto auto auto;
   grid-template-columns: 1fr; }
 
+.productstext1 .productstext2 .productstext3 {
+  height: auto;
+  width: auto;
+  display: block; }
+
 .productscabernet {
   grid-row: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 60px; }
 
 .flaskecabernetsauvignont {
-  height: 500px; }
+  height: 500px;
+  margin-bottom: 25px; }
 
 .productstempranillo {
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 60px; }
 
 .flasketempranillo {
-  height: 500px; }
+  height: 500px;
+  margin-bottom: 25px; }
 
 .productschardonnay {
   grid-row: 3;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 60px; }
 
 .flaskechardonnaypng {
-  height: 500px; }
+  height: 500px;
+  margin-bottom: 25px; }
+
 
 .about_us {
   grid-row: 4; }
@@ -189,6 +205,43 @@ header {
 .history {
   grid-row: 5; }
 
+.his_grid {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: 80px 115px 2fr;
+  height: 100%;
+  width: 100%; }
+
+.his_head {
+  grid-column: 2;
+  grid-row: 1; }
+  .his_head h1 {
+    color: #000000; }
+
+.his_pic_flex {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-evenly; }
+
+.his_pic1, .his_pic2, .his_pic3 {
+  background: url("../images/Mobile.jpg") center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  margin: auto 3px auto 3px; }
+
+.his_text_flex {
+  grid-column: 2;
+  grid-row: 3; }
+
+.his_text1, .his_text2 {
+  margin-top: 12px; }
+  .his_text1 p, .his_text2 p {
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center; }
+
 .a_grid {
   display: grid;
   grid-template-rows: 1fr;
@@ -197,21 +250,19 @@ header {
 .footer {
   grid-row: 6; }
 
-//fejl 404-side
+/*Fejl-404-side*/
 .error-page {
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
-  grid-template-columns:  repeat(6, 1fr);
-}
+  grid-template-columns: repeat(6, 1fr); }
 
 .error-page h1 {
   grid-row: 1 / span 1;
   grid-column: 2 / span 4;
-  color: $red;
+  color: #781616;
   text-align: center;
   font-size: 100px;
-  margin: 30px 0 0 0;
-}
+  margin: 30px 0 0 0; }
 
 .error-page h3 {
   grid-row: 2 / span 1;
@@ -220,20 +271,17 @@ header {
   font-family: Arial;
   font-weight: normal;
   font-size: 20px;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .error {
   grid-row: 3 / span 2;
-  grid-column: 1 / span 6;
-}
+  grid-column: 1 / span 6; }
 
 .error-page p {
   grid-row: 5 / span 1;
   grid-column: 2 / span 4;
   text-align: center;
-  margin-top: 25px;
-}
+  margin-top: 25px; }
 
 .error-button {
   grid-row: 6 / span 1;
@@ -241,25 +289,22 @@ header {
   text-align: center;
   font-family: Arial;
   color: white;
-  background-color: $red;
+  background-color: #781616;
   border-radius: 2px;
   border: none;
   width: 170px;
   height: 30px;
   margin: 0 auto;
-  margin-top: 8px;
- }
+  margin-top: 8px; }
 
 .error-button:hover {
-  background-color: #9a3d3d;
-}
+  background-color: #9a3d3d; }
 
 .error-page a {
   text-decoration: none;
-  color: white;
-}
+  color: white; }
 
-//Stående tablet
+/*Stående tablet*/
 @media screen and (min-width: 768px) {
   .p-mobile {
     grid-row: 6 / span 2;
@@ -270,20 +315,105 @@ header {
     grid-row: 3 / span 3;
     grid-column: 2 / span 6; }
 
-  //Fejl 404-side
+  /*Fejl-404-side*/
   .error {
     grid-row: 3 / span 2;
-    grid-column: 2 / span 4;
-  }
-}
-
-//Liggende tablet
-@media screen and (min-width: 992px) {
-  .slideshow-container {
     grid-column: 2 / span 4; } }
 
-//Computer
+/*Liggende tablet*/
+@media screen and (min-width: 992px) {
+  .slideshow-container {
+    grid-column: 2 / span 4; } 
+    grid-column: 2 / span 4; } 
+
+  .products {
+    grid-row: 3;
+    display: grid;
+    grid-template-rows: 50px auto auto auto; }
+
+  .productsgrid {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr; }
+
+  /* HOVER OVER I CSS:
+    .productsgrid :hover {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    background-color: rgba(78, 16, 16, 0.85);
+    display: block;
+    position: absolute;
+  }
+  */
+  #productstext1 {
+    display: none; }
+
+  #productstext2 {
+    display: none; }
+
+  #productstext3 {
+    display: none; }
+
+  .productscabernet {
+    grid-row: 1;
+    grid-column: 1;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 60px; }
+
+  .productscabernet:hover #productstext1 {
+    grid-row: 1;
+    grid-column: 1;
+    height: auto;
+    width: auto;
+    display: flex;
+    background-color: rgba(78, 16, 16, 0.85);
+    position: absolute;
+    color: white;
+    text-align: left;
+    padding: 30px; }
+
+  .flaskecabernetsauvignont {
+    height: 500px;
+    margin-bottom: 25px; }
+
+  .productstempranillo {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 60px; }
+
+  .flasketempranillo {
+    height: 500px;
+    margin-bottom: 25px; }
+
+  .productschardonnay {
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 60px; }
+
+  .flaskechardonnaypng {
+    height: 500px;
+    margin-bottom: 25px; } 
+}
+
+/*Computerskærm*/
 @media screen and (min-width: 1200px) {
+    body {
+    grid-template-rows: 150px 500px auto auto 450px 200px; }
+  
   h1 {
     font-size: 46pt; }
 
@@ -291,13 +421,6 @@ header {
     grid-row: 1 / span 2;
     grid-column: 1 / span 14; }
 
-  .slideshow-container {
-    grid-column: 2 / span 3; }
-
-  .p-mobile {
-    grid-column: 4 / span 8; } }
-
-@media screen and (min-width: 1200px) {
   .h_grid {
     display: grid;
     grid-template-columns: 1fr 5fr 4fr;
@@ -393,22 +516,67 @@ header {
     border: 0;
     -webkit-appearance: none; }
 
-  //Fejl 404-side
+  .slideshow-container {
+    grid-column: 2 / span 3; }
+
+  .p-mobile {
+    grid-column: 4 / span 8; } }
+
+/*Fejl-404-side*/
   .error-page h1 {
     font-size: 120px;
-    margin: 50px 0 0 0;
-  }
+    margin: 50px 0 0 0; }
+
   .error-page h3 {
     font-size: 25px;
-    margin-bottom: 0;
-  }
+    margin-bottom: 0; }
+
   .error-page p {
-    margin-top: 0;
-  }
+    margin-top: 0; }
+
   .error {
     grid-row: 3 / span 2;
-    grid-column: 3 / span 3;
-  }
-}
+    grid-column: 3 / span 3; } }
+/*# sourceMappingURL=index.css.map */
+
+.his_grid {
+    display: grid;
+    grid-template-columns: 92px 1fr 92px;
+    grid-template-rows: 80px 1fr 2fr;
+    height: 100%;
+    width: 100%; }
+
+  .his_head {
+    grid-column: 2;
+    grid-row: 1; }
+    .his_head h1 {
+      color: #000000; }
+
+  .his_help {
+    display: grid;
+    grid-template-rows: 0;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%; }
+
+  .his_text1, .his_text2 {
+    margin: 12px; }
+
+  .his_text1 {
+    grid-column: 1; }
+
+  .his_text2 {
+    grid-column: 2; }
+
+  .his_pic_flex {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px; }
+
+  .his_text_flex {
+    grid-column: 2;
+    grid-row: 2; } }
 
 /*# sourceMappingURL=index.css.map */
