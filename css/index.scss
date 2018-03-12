@@ -6,6 +6,7 @@
 }
 
 $red: #781616;
+$yellow: #f6d452;
 
 body {
   margin: 0; // Ingen kanter i siden af browser
@@ -21,9 +22,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: "Goudy Old Style", "Times New Roman", Serif;
-  color: white;
   text-align: center;
   font-size: 25pt;
+  font-weight: normal;
 }
 
 ul, ol {
@@ -85,30 +86,29 @@ header {
   grid-row: 1 / span 1;
   grid-column: 1 / span 14;
   margin-top: 45px;
+  color: white;
 }
 
 .p-mobile {
   grid-row: 2 / span 3;
   grid-column: 2 / span 12;
   color: white;
-  text-align: center;
   margin-top: 45px;
 }
 
-* {box-sizing:border-box}
-
-// Slideshow container
+//Slideshow container
 .slideshow-container {
   grid-row: 5 / span 3;
   grid-column: 2 / span 12;
 }
 
-// Hide the images by default
-.mySlides {
+//Hide the images by default
+.slides {
   display: block;
 }
 
-// Next & previous buttons
+
+//Next & previous buttons
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -131,7 +131,7 @@ header {
   grid-column: 13 / span 2;
 }
 
-// On hover, add a black background color with a little bit see-through */
+//On hover change color of arrow
 .prev:hover, .next:hover {
   color: #d5d5d5;
 }
@@ -148,14 +148,51 @@ header {
 
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
+
+
+  //About us - Dominio de Pontas
+  .p-mobile {
+    grid-row: 6 / span 2;
+    grid-column: 3 / span 10;
+    text-align: center;
+    }
+
+  .slideshow-container {
+    grid-row: 3 / span 3;
+    grid-column: 2 / span 6;
+  }
 }
 
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
+
+
+  //About us - Dominio de Pontas
+  .slideshow-container {
+    grid-column: 2 / span 4;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+  h1 {
+    font-size: 46pt;
+  }
+
+
+  //About us - Dominio de Pontas
+  .dominio-grid h1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 14;
+  }
+
+  .slideshow-container {
+    grid-column: 2 / span 3;
+  }
+
+  .p-mobile {
+    grid-column: 4 / span 8;
+  }
 }
 
 @media print {
