@@ -1,200 +1,320 @@
-// Alt der gælder for mobil og højere
-
-* { // Gælder alt på hele siden
-  -webkit-box-sizing: border-box; // -webkit- browserunderstøttelse
-  box-sizing: border-box; // Bokse har altid den størrelse man giver uanset om der tilføjes margen mv.
-}
-
-$red: #781616;
-$yellow: #f6d452;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 body {
-  margin: 0; // Ingen kanter i siden af browser
+  margin: 0;
   display: grid;
-  grid-template-rows: 200px 200px 200px auto 200px 200px;
-  grid-template-columns: 1fr;
-}
+  grid-template-rows: 150px 500px auto auto 200px 200px;
+  grid-template-columns: 1fr; }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0; // Ingen ydre margen fra overskrifter
-  padding: 0; // Ingen indre margen fra overskrifter
-}
+h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
 
 h1 {
   font-family: "Goudy Old Style", "Times New Roman", Serif;
   text-align: center;
   font-size: 25pt;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 ul, ol {
-  margin: 0; // Ingen ydre margen fra lister
-  padding: 0; // Ingen indre margen fra lister
-  list-style-position: inside; // List punkter står på linje
-}
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; }
 
 li {
-  margin: 0; // Ingen ydre margen fra listpunkter
-}
+  margin: 0; }
 
 p {
-  margin: 0; // Ingen ydre margen fra paragraffer
-  padding: 0; // Ingen indre margen fra paragraffer
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   font-size: 12pt;
-  line-height: 16pt;
-}
+  line-height: 16pt; }
 
-// Sikrer billeder er responsive
 img {
-  display: block; // Billeder er et element (laver linjeskift)
-  max-width: 100%; // Bredde må maks fylde 100%
-  height: auto; // Højden skal tilpasse sig
-}
+  display: block;
+  max-width: 100%;
+  height: auto; }
 
 header {
-  grid-row: 1;
-}
+  grid-row: 1; }
+
+.h_place {
+  position: fixed;
+  height: 100%;
+  width: 100%; }
+
+.h_grid {
+  background-color: white;
+  height: 54px;
+  padding-top: 1px; }
+
+.h_logo {
+  background: url("../images/Logo_roed.png") center no-repeat;
+  background-size: cover;
+  height: 50px;
+  width: 100px;
+  margin: 6px 0 0 2px; }
+
+#home {
+  height: 100%;
+  width: 100%; }
+
+.dropdown {
+  position: relative; }
+
+.fa-bars {
+  color: #781616; }
+
+.dropdown_btn {
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  right: 12px;
+  top: 1px; }
+
+.dropdown_btn:hover {
+  cursor: pointer; }
+
+.h_content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  min-width: 80%;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  outline: 5px auto #5d5d5d; }
+  .h_content a {
+    color: black;
+    padding: 10px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    font-family: "Goudy Old Style"; }
+  .h_content a:hover {
+    color: #781616;
+    font-weight: bold; }
+
+.dropdown:hover .h_content {
+  display: block; }
+
+.h_subscribe {
+  display: none; }
 
 .index {
-  grid-row: 2;
-}
+  grid-row: 2; }
 
 .products {
   grid-row: 3;
-}
+  display: grid;
+  grid-template-rows: 50px auto auto auto; }
 
-//About us - Dominio de Pontas
+.productsgrid {
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr; }
+
+.productscabernet {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flaskecabernetsauvignont {
+  height: 500px; }
+
+.productstempranillo {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flasketempranillo {
+  height: 500px; }
+
+.productschardonnay {
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flaskechardonnaypng {
+  height: 500px; }
+
 .about_us {
-  grid-row: 4;
-}
+  grid-row: 4; }
 
 .dominio-grid {
   display: grid;
   grid-template-rows: repeat(8, 80px);
-  grid-template-columns: repeat(14, 1fr);
-}
+  grid-template-columns: repeat(14, 1fr); }
 
 .about_us img {
   grid-row: 1 / span 8;
   grid-column: 1 / span 14;
-  width:100%;
-  height:100%;
-}
+  width: 100%;
+  height: 100%; }
 
 .dominio-grid h1 {
   grid-row: 1 / span 1;
   grid-column: 1 / span 14;
   margin-top: 45px;
-  color: white;
-}
+  color: white; }
 
 .p-mobile {
   grid-row: 2 / span 3;
   grid-column: 2 / span 12;
   color: white;
-  margin-top: 45px;
-}
+  margin-top: 45px; }
 
-//Slideshow container
 .slideshow-container {
   grid-row: 5 / span 3;
-  grid-column: 2 / span 12;
-}
+  grid-column: 2 / span 12; }
 
-//Hide the images by default
 .slides {
-  display: block;
-}
-
-
-//Next & previous buttons
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  width: auto;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-}
-
-//Position "previous button"
-.prev {
-  grid-row: 6;
-  grid-column: 1 / span 2;
-}
-
-//Position "next button"
-.next {
-  grid-row: 6;
-  grid-column: 13 / span 2;
-}
-
-//On hover change color of arrow
-.prev:hover, .next:hover {
-  color: #d5d5d5;
-}
+  display: block; }
 
 .history {
-  grid-row: 5;
-}
+  grid-row: 5; }
+
+.a_grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr; }
 
 .footer {
-  grid-row: 6;
-}
-
-
+  grid-row: 6; }
 
 @media screen and (min-width: 768px) {
-  // Alt der ændres i tablet stående fra mobil
-
-
-  //About us - Dominio de Pontas
   .p-mobile {
     grid-row: 6 / span 2;
     grid-column: 3 / span 10;
-    text-align: center;
-    }
+    text-align: center; }
 
   .slideshow-container {
     grid-row: 3 / span 3;
-    grid-column: 2 / span 6;
-  }
-}
+    grid-column: 2 / span 6; } }
 
 @media screen and (min-width: 992px) {
-  // Alt der ændres i tablet liggende fra mobil og tablet stående
-
-
-  //About us - Dominio de Pontas
   .slideshow-container {
-    grid-column: 2 / span 4;
-  }
-}
+    grid-column: 2 / span 4; } }
 
 @media screen and (min-width: 1200px) {
-  // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
   h1 {
-    font-size: 46pt;
-  }
+    font-size: 46pt; }
 
-
-  //About us - Dominio de Pontas
   .dominio-grid h1 {
     grid-row: 1 / span 2;
-    grid-column: 1 / span 14;
-  }
+    grid-column: 1 / span 14; }
 
   .slideshow-container {
-    grid-column: 2 / span 3;
-  }
+    grid-column: 2 / span 3; }
 
   .p-mobile {
-    grid-column: 4 / span 8;
-  }
-}
+    grid-column: 4 / span 8; } }
 
-@media print {
-  // Alt der gælder for print specifikt
-}
+@media screen and (min-width: 1200px) {
+  .h_grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr;
+    height: 130px;
+    padding-top: 0; }
+
+  .h_logo {
+    grid-row: 1;
+    grid-column: 1;
+    background: url(../images/Logo_roed.png) center no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 200px;
+    margin: 6px 0 0 2px; }
+
+  nav {
+    grid-column: 2; }
+
+  .dropdown {
+    position: relative; }
+
+  .fa-bars {
+    color: #781616; }
+
+  .dropdown_btn {
+    display: none;
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    right: 12px;
+    top: 1px; }
+
+  .dropdown:hover .h_content {
+    display: flex; }
+
+  .h_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    position: static;
+    z-index: 1;
+    min-width: 0;
+    top: 0;
+    right: 0;
+    outline: 0px; }
+
+  .h_content:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    position: static;
+    z-index: 1;
+    min-width: 0;
+    top: 0;
+    right: 0; }
+
+  .h_subscribe {
+    grid-column: 3;
+    display: flex;
+    margin-top: 47px;
+    justify-content: center; }
+
+  .sub_button {
+    text-align: center;
+    font-family: Arial;
+    color: white;
+    background-color: #781616;
+    border-radius: 2px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    margin-right: 15px; }
+
+  .sub_button:hover {
+    cursor: pointer;
+    background-color: #9a3d3d; }
+
+  .h_placeholder {
+    height: 30px;
+    width: 300px;
+    outline: 5px auto #5d5d5d; }
+
+  input {
+    width: 100%;
+    height: 100%;
+    background-color: #d5d5d5;
+    color: #000000;
+    padding-left: 5px;
+    border: 0;
+    -webkit-appearance: none; } }
+
+/*# sourceMappingURL=index.css.map */
