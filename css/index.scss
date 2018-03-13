@@ -7,7 +7,7 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 150px 500px auto auto auto 200px;
+  grid-template-rows: 150px auto auto auto auto auto;
   grid-template-columns: 1fr; }
 
 h1 {
@@ -45,6 +45,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto; }
+
+//Oliver start-------------------------------------------------------
 
 header {
   grid-row: 1; }
@@ -118,12 +120,12 @@ header {
 .h_subscribe {
   display: none; }
 
+//Oliver slut--------------------------------------------------------
+
+//Cecilie Start--------------------------------------------------------
+
 .index {
   grid-row: 2; }
-
-
-//Casper start--------------------------------------------------------
-
 
 .img {
   background-image: url(../images/indexbillede.jpg);
@@ -171,9 +173,11 @@ header {
 
 .knap:hover{
   background-color: #9a3d3d;
-
 }
 
+//Cecilie Slut--------------------------------------------------------
+
+//Casper start--------------------------------------------------------
 
 .products {
   grid-row: 3;
@@ -226,7 +230,9 @@ header {
   margin-bottom: 25px; }
 
 
-//Casper slut-------------------------------------------------------------------------
+//Casper slut---------------------------------------------------------
+
+//Sabine start-------------------------------------------------------
 
 .about_us {
   grid-row: 4; }
@@ -260,6 +266,10 @@ header {
 
 .slides {
   display: block; }
+
+//Sabine slut--------------------------------------------------
+
+//Oliver start--------------------------------------------------
 
 .history {
   grid-row: 5; }
@@ -306,8 +316,36 @@ header {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr; }
 
-.footer {
-  grid-row: 6; }
+//Oliver slut---------------------------------------------
+
+//Cecilie start---------------------------------------------
+
+footer{
+  background-color: #781616;
+  color: white;
+  line-height: 12pt;
+  font-family: "Goudy Old Style";
+  grid-row: 6;
+}
+
+.informationer{
+  font-size: 12px;
+  float: left;
+}
+
+.SoMe{
+  float: right;
+  text-align: center;
+  font-size: 25px;
+}
+
+.Nederst{
+  width: 75%;
+  margin: 0 auto;
+}
+
+//Cecilie slut---------------------------------------------
+
 
 /*Fejl-404-side*/
 .error-page {
@@ -361,30 +399,6 @@ header {
   width: 30%;
 }
 
-footer{
-  background-color: #781616;
-  color: white;
-  line-height: 12pt;
-  font-family: "Goudy Old Style";
-}                         
-
-.informationer{
-  font-size: 12px;
-  float: left;
-}
-
-.SoMe{
-  float: right;
-  text-align: center;
-  font-size: 25px;
-
-}
-
-.Nederst{
-  width: 75%;
-  margin: 0 auto;
-}
-
 .error-button:hover {
   background-color: #9a3d3d; }
 
@@ -394,79 +408,98 @@ footer{
 
 /*Stående tablet*/
 @media screen and (min-width: 768px) {
-  .p-mobile {
-    grid-row: 6 / span 2;
-    grid-column: 3 / span 10;
-    text-align: center; }
 
-  .slideshow-container {
-    grid-row: 3 / span 3;
-    grid-column: 2 / span 6; }
+//Sabine start -------------------------------------------------
 
-  /*Fejl-404-side*/
-  .error {
-    grid-row: 3 / span 2;
-    grid-column: 2 / span 4; } }
+.p-mobile {
+  grid-row: 6 / span 2;
+  grid-column: 3 / span 10;
+  text-align: center; }
+
+.slideshow-container {
+  grid-row: 3 / span 3;
+  grid-column: 2 / span 6; }
+
+//Sabine slutt -------------------------------------------------
+
+
+/*Fejl-404-side*/
+.error {
+  grid-row: 3 / span 2;
+  grid-column: 2 / span 4; }
+
+}
 
 /*Liggende tablet*/
 @media screen and (min-width: 992px) {
 
-  // Alt der ændres i tablet liggende fra mobil og tablet stående
-  h3{
+  h3 {
     font-size: 15px;
   }
 
-  p{
+  p {
     font-size: 13px;
   }
-  
+
+  //Cecilie start-----------------------------------------------------
+
   .i_tekst {
     width: 40%;
     font-size: 20px;
   }
 
- .Forhandlere{
-   width: 20%;
-   float: left;
-   margin: 0;
-   margin-left: 15%;
- }
+  .Forhandlere {
+    width: 20%;
+    float: left;
+    margin: 0;
+    margin-left: 15%;
+  }
 
-  .Nederst{
+  .Nederst {
     width: 40%;
     float: right;
     margin: 0;
     margin-right: 15%;
   }
 
-  .informationer{
+  .informationer {
     float: right;
     font-size: 13px;
   }
 
-  .SoMe{
+  .SoMe {
     float: left;
     font-size: 35px;
   }
 
-  footer{
+  footer {
     padding-top: 4%;
   }
-}
+
+  //Cecilie slut-----------------------------------------------------
+
+  //Sabine start---------------------------------------------------
 
   .slideshow-container {
-    grid-column: 2 / span 4; } 
+    grid-column: 2 / span 4;
+  }
+
+  //Sabine slut---------------------------------------------------
+
+  //Casper start---------------------------------------------------
 
   .products {
     grid-row: 3;
     display: grid;
-    grid-template-rows: 50px auto auto auto; }
+    grid-template-rows: 50px auto auto auto;
+  }
 
   .productsgrid {
     grid-row: 2;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr; }
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   /* HOVER OVER I CSS:
     .productsgrid :hover {
@@ -479,13 +512,16 @@ footer{
   }
   */
   #productstext1 {
-    display: none; }
+    display: none;
+  }
 
   #productstext2 {
-    display: none; }
+    display: none;
+  }
 
   #productstext3 {
-    display: none; }
+    display: none;
+  }
 
   .productscabernet {
     grid-row: 1;
@@ -495,7 +531,8 @@ footer{
     display: flex;
     flex-direction: column;
     margin-top: 70px;
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+  }
 
   .productscabernet:hover #productstext1 {
     grid-row: 1;
@@ -507,11 +544,13 @@ footer{
     position: absolute;
     color: white;
     text-align: left;
-    padding: 30px; }
+    padding: 30px;
+  }
 
   .flaskecabernetsauvignont {
     height: 500px;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+  }
 
   .productstempranillo {
     grid-row: 1;
@@ -520,11 +559,13 @@ footer{
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+  }
 
   .flasketempranillo {
     height: 500px;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+  }
 
   .productschardonnay {
     grid-row: 1;
@@ -533,7 +574,8 @@ footer{
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+  }
 
   .flaskechardonnaypng {
     height: 500px;
@@ -542,27 +584,27 @@ footer{
 
   //Casper slut-----------------------------------------
 
+}
 
 /*Computerskærm*/
 @media screen and (min-width: 1200px) {
 
+body {
+  grid-template-rows: 150px 500px auto auto 450px 200px;
+}
 
+h1 {
+  font-size: 46pt;
+}
 
-    body {
-    grid-template-rows: 150px 500px auto auto 450px 200px; }
-  
-  h1 {
-    font-size: 46pt; }
-
-  .dominio-grid h1 {
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 14; }
+//Oliver start---------------------------------------------------
 
   .h_grid {
     display: grid;
     grid-template-columns: 1fr 5fr 4fr;
     height: 130px;
-    padding-top: 0; }
+    padding-top: 0;
+  }
 
   .h_logo {
     grid-row: 1;
@@ -571,16 +613,20 @@ footer{
     background-size: cover;
     height: 120px;
     width: 200px;
-    margin: 6px 0 0 2px; }
+    margin: 6px 0 0 2px;
+  }
 
   nav {
-    grid-column: 2; }
+    grid-column: 2;
+  }
 
   .dropdown {
-    position: relative; }
+    position: relative;
+  }
 
   .fa-bars {
-    color: #781616; }
+    color: #781616;
+  }
 
   .dropdown_btn {
     display: none;
@@ -590,10 +636,12 @@ footer{
     background-color: inherit;
     font-family: inherit;
     right: 12px;
-    top: 1px; }
+    top: 1px;
+  }
 
   .dropdown:hover .h_content {
-    display: flex; }
+    display: flex;
+  }
 
   .h_content {
     display: flex;
@@ -605,7 +653,8 @@ footer{
     min-width: 0;
     top: 0;
     right: 0;
-    outline: 0; }
+    outline: 0;
+  }
 
   .h_content:hover {
     display: flex;
@@ -616,13 +665,15 @@ footer{
     z-index: 1;
     min-width: 0;
     top: 0;
-    right: 0; }
+    right: 0;
+  }
 
   .h_subscribe {
     grid-column: 3;
     display: flex;
     margin-top: 47px;
-    justify-content: center; }
+    justify-content: center;
+  }
 
   .sub_button {
     text-align: center;
@@ -633,16 +684,19 @@ footer{
     border: none;
     width: 150px;
     height: 30px;
-    margin-right: 15px; }
+    margin-right: 15px;
+  }
 
   .sub_button:hover {
     cursor: pointer;
-    background-color: #9a3d3d; }
+    background-color: #9a3d3d;
+  }
 
   .h_placeholder {
     height: 30px;
     width: 300px;
-    outline: 5px auto #5d5d5d; }
+    outline: 5px auto #5d5d5d;
+  }
 
   input {
     width: 100%;
@@ -651,71 +705,102 @@ footer{
     color: #000000;
     padding-left: 5px;
     border: 0;
-    -webkit-appearance: none; }
-  
+    -webkit-appearance: none;
+  }
+
+//Oliver slut-----------------------------------------------------------
+
+//Sabine start-------------------------------------------------------
+
+  .dominio-grid h1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 14;
+  }
 
   .slideshow-container {
-    grid-column: 2 / span 3; }
+    grid-column: 2 / span 3;
+  }
 
   .p-mobile {
-    grid-column: 4 / span 8; } }
+    grid-column: 4 / span 8;
+  }
 
-/*Fejl-404-side*/
-  .error-page h1 {
-    font-size: 120px;
-    margin: 50px 0 0 0; }
+//Sabine slut-----------------------------------------------------------
 
-  .error-page h3 {
-    font-size: 25px;
-    margin-bottom: 0; }
-
-  .error-page p {
-    margin-top: 0; }
-
-  .error {
-    grid-row: 3 / span 2;
-    grid-column: 3 / span 3; } }
-/*# sourceMappingURL=index.css.map */
+//Oliver start-----------------------------------------------
 
 .his_grid {
-    display: grid;
-    grid-template-columns: 92px 1fr 92px;
-    grid-template-rows: 80px 1fr 2fr;
-    height: 100%;
-    width: 100%; }
+  display: grid;
+  grid-template-columns: 92px 1fr 92px;
+  grid-template-rows: 80px 1fr 2fr;
+  height: 100%;
+  width: 100%;
+}
 
-  .his_head {
-    grid-column: 2;
-    grid-row: 1; }
-    .his_head h1 {
-      color: #000000; }
+.his_head {
+  grid-column: 2;
+  grid-row: 1;
+}
+.his_head h1 {
+  color: #000000;
+}
 
-  .his_help {
-    display: grid;
-    grid-template-rows: 0;
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
-    width: 100%; }
+.his_help {
+  display: grid;
+  grid-template-rows: 0;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+}
 
-  .his_text1, .his_text2 {
-    margin: 12px; }
+.his_text1, .his_text2 {
+  margin: 12px;
+}
 
-  .his_text1 {
-    grid-column: 1; }
+.his_text1 {
+  grid-column: 1;
+}
 
-  .his_text2 {
-    grid-column: 2; }
+.his_text2 {
+  grid-column: 2;
+}
 
-  .his_pic_flex {
-    grid-column: 2;
-    grid-row: 3;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 25px; }
+.his_pic_flex {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
 
-  .his_text_flex {
-    grid-column: 2;
-    grid-row: 2; }
+.his_text_flex {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+//Oliver start--------------------------------------------
+
+/*Fejl-404-side*/
+.error-page h1 {
+  font-size: 120px;
+  margin: 50px 0 0 0;
+}
+
+.error-page h3 {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.error-page p {
+  margin-top: 0;
+}
+
+.error {
+  grid-row: 3 / span 2;
+  grid-column: 3 / span 3;
+}
+
+}
 
 
 /*# sourceMappingURL=index.css.map */
