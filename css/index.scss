@@ -397,12 +397,28 @@ header {
   display: flex;
   justify-content: space-evenly; }
 
-.his_pic1, .his_pic2, .his_pic3 {
-  background: url("../images/Mobile.jpg") center no-repeat;
+@mixin pic_prop {
   background-size: contain;
   width: 100%;
   height: 100%;
-  margin: auto 3px auto 3px; }
+  margin: auto 3px auto 3px;
+}
+
+.his_pic1 {
+  background: url("../images/vin1.jpeg") center no-repeat;
+  @include pic_prop;
+}
+
+.his_pic2 {
+  background: url("../images/vin2.jpeg") center no-repeat;
+  @include pic_prop;
+}
+
+.his_pic3 {
+  background: url("../images/vin3.jpeg") center no-repeat;
+  @include pic_prop;
+}
+
 
 .his_text_flex {
   grid-column: 2;
@@ -988,7 +1004,7 @@ h1 {
 .his_grid {
   display: grid;
   grid-template-columns: 92px 1fr 92px;
-  grid-template-rows: 80px 1fr 2fr;
+  grid-template-rows: 130px 140px 180px;
   height: 100%;
   width: 100%;
 }
@@ -1026,7 +1042,7 @@ h1 {
   grid-row: 3;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 25px;
+  margin: 15px 190px 20px 190px;
 }
 
 .his_text_flex {
