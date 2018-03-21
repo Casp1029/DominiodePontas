@@ -7,8 +7,9 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 150px auto auto auto auto auto;
-  grid-template-columns: 1fr; }
+  grid-template-rows: 60px auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  }
 
 h1 {
   font-family: "Goudy Old Style", "Times New Roman", Serif;
@@ -52,8 +53,8 @@ header {
   grid-row: 1; }
 
 .h_place {
+  z-index: 10;
   position: fixed;
-  height: 100%;
   width: 100%; }
 
 .h_grid {
@@ -62,7 +63,6 @@ header {
   padding-top: 1px; }
 
 .h_logo {
-  background: url("../images/Logo_roed.png") center no-repeat;
   background-size: cover;
   height: 50px;
   width: 100px;
@@ -85,7 +85,7 @@ header {
   background-color: inherit;
   font-family: inherit;
   right: 12px;
-  top: 1px; }
+  top: 7px; }
 
 .dropdown_btn:hover {
   cursor: pointer; }
@@ -95,10 +95,11 @@ header {
   position: absolute;
   z-index: 1;
   min-width: 80%;
-  top: 40px;
+  top: 50px;
   right: 0;
   background-color: white;
-  outline: 5px auto #5d5d5d; }
+  outline: 5px auto #5d5d5d;
+}
 
 .h_content a {
   color: black;
@@ -114,9 +115,10 @@ header {
   color: #781616;
   font-weight: bold; }
 
+/*
 .dropdown:hover .h_content {
   display: block; }
-
+*/
 .h_subscribe {
   display: none; }
 
@@ -160,7 +162,6 @@ header {
 }
 
 .knap{
-  width: 180px;
   height: 40px;
   background-color: #781616;
   font-family: Arial;
@@ -169,6 +170,7 @@ header {
   border-radius: 5px;
   margin-left: 30%;
   margin-right: 30%;
+  border: none;
 }
 
 .knap:hover{
@@ -325,12 +327,48 @@ header {
   .his_text1 p, .his_text2 p {
     font-family: Arial;
     font-size: 15px;
-    text-align: center; }
+    text-align: center;
+  }
 
-.a_grid {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr; }
+.history_side {
+  position: relative;
+  grid-row: 2/6;
+  grid-column: 1;
+}
+
+.hu_pics {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-evenly;
+}
+
+.hu_pic1 {
+background: url("../images/vin1.jpg") no-repeat center;;
+}
+
+.hu_pic2 {
+  background: url("../images/vin2.jpg") no-repeat center;;
+}
+
+.hu_pic3 {
+  background: url("../images/vin3.jpg") no-repeat center;;
+}
+
+.hu_pic1, .hu_pic2, .hu_pic3 {
+  height: 70px;
+  width: 70px;
+  margin: auto 3px auto 3px;
+  background-size: contain;
+}
+
+.hu_text1, .hu_text2 {
+  font-family: Arial;
+  font-size: 15px;
+  text-align: center;
+}
+
+
 
 //Oliver slut---------------------------------------------
 
@@ -605,10 +643,6 @@ footer{
 /*Computerskærm*/
 @media screen and (min-width: 1200px) {
 
-body {
-  grid-template-rows: 150px 500px auto auto 450px 200px;
-}
-
 h1 {
   font-size: 46pt;
 }
@@ -625,7 +659,6 @@ h1 {
   .h_logo {
     grid-row: 1;
     grid-column: 1;
-    background: url(../images/Logo_roed.png) center no-repeat;
     background-size: cover;
     height: 120px;
     width: 200px;
@@ -793,6 +826,99 @@ h1 {
   grid-column: 2;
   grid-row: 2;
 }
+
+  .hu_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .hu_text1 {
+    font-family: Arial;
+    font-size: 15px;
+    grid-column: 2/3;
+    padding-left: 150px;
+
+    p {
+      text-align: left;
+    }
+
+  }
+
+  .hu_grid {
+    display: grid;
+    grid-template-columns: 100px repeat(2, 1fr) 100px;
+    grid-template-rows: 1fr;
+  }
+
+  .hu_head {
+    padding-top: 15px;
+  }
+
+  .hu_pics {
+    display: flex;
+    grid-column: 3/4;
+    flex-direction: column;
+  }
+
+  .hu_pics {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    grid-column: 3/4;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 90px;
+  }
+
+  .hu_pic1, .hu_pic2, .hu_pic3 {
+    height: 100%;
+    width: 100%;
+    /* margin: auto 3px auto 3px; */
+    background-size: contain;
+    margin: 2px;
+    cursor: pointer;
+  }
+
+  .black {
+    display: none;
+    position: absolute;
+    height: 155%;
+    width: 100%;
+    background-color: black;
+    z-index: 11;
+    opacity: 0.5;
+    top: -60px;
+  }
+
+  @mixin  full {
+    display: none;
+    position: fixed;
+    height: 90%;
+    width: 90%;
+    bottom: 30px;
+    left: 70px;
+    z-index: 12;
+  }
+
+  .full_img1, .full_img2, .full_img3 {
+    @include full;
+  }
+
+  .full_img1 {
+    background: url(../images/vin1.jpg) no-repeat center;
+    background-size: contain;
+  }
+
+  .full_img2 {
+    background: url(../images/vin2.jpg) no-repeat center;
+    background-size: contain;
+  }
+
+  .full_img3 {
+    background: url(../images/vin3.jpg) no-repeat center;
+    background-size: contain;
+  }
 
 //Oliver start--------------------------------------------
 
