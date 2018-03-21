@@ -63,7 +63,7 @@
                             </div>
 
                             <div class="h_menu3">
-                                <a href="">Vores historie</a>
+                                <a href="history.html">Vores historie</a>
                             </div>
 
                             <div class="h_menu4">
@@ -75,6 +75,9 @@
 
             </nav>
             <div class="h_logo">
+                <a href="index.html">
+                    <img src="images/Logo_roed.png">
+                </a>
             </div>
             <div class="h_subscribe">
 
@@ -191,16 +194,6 @@
     </div>
 </section>
 
-
-
-<section class="about_us">
-    <div class="a_grid">
-        <div class="a_title"></div>
-        <div class="a_pics"></div>
-        <div class="a_text"></div>
-    </div>
-</section>
-
 <section class="history">
     <div class="his_grid">
         <div class="his_head">
@@ -270,22 +263,63 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
- <!--
+
         <script>
         $(document).ready(function(e)  {
+            
+            /*
             $(".productscabernet").hover( handlerIn, handlerOut )
             {
 
                 $(".productstext1").after("<div id='sometext'>Some appended text.</div>")
 
             }
+*/
+
+            var navOpen = 0;
+
+            $(".dropdown_btn").click(function () {
+                if (navOpen == 1) {
+                    $(".h_content").stop().slideUp(200);
+                    navOpen = 0;
+                }
+                else {
+                    $(".h_content").stop().slideDown(200);
+                    navOpen = 1;
+                }
+
+            });
+
+            /* $(document).click(function (e) {
+                e.stopPropagation();
+                var container = $(".h_content, .dropdown_btn");
+
+                //check if the clicked area is dropDown or not
+                if (container.has(e.target).length === 0) {
+                    $(".h_content").slideUp(500);
+                    navOpen = 0;
+                }
+            }) */
+
+            $(window).resize(function (e) {
+                var width = $(window).width();
+
+                if (width > 1200) {
+                    $(".h_content").css({"display": "-webkit-flex", "display": "flex"});
+                }
+                else {
+                    $(".h_content").css("display", "none");
+                    navOpen = 0;
+                }
+
+            });
 
 
 
         });
 
     </script>
--->
+
 
 </body>
 
