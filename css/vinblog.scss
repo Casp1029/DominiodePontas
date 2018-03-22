@@ -25,6 +25,18 @@ $yellowhover: #f6d452;
 $redoverlay: rgba(78, 16, 16, 0.85);
 
 
+button {
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  color: white;
+
+  text-decoration: none;
+}
+
 header {
   grid-row: 1; }
 
@@ -87,7 +99,9 @@ header {
   display: block;
   font-family: "Goudy Old Style", Times New Roman; }
 
-.h_content a:hover {
+
+
+ .h_content a:hover {
   color: #781616;
   font-weight: bold; }
 
@@ -309,12 +323,6 @@ article2 {
 .grid_boi {
   grid-row: 2/3;
   grid-column: 1;
-}
-
-img:hover {
-  opacity: 0.8;
-  background-color: $hover;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 .visually-hidden {
