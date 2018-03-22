@@ -36,6 +36,60 @@
 <!-- i <body> har man alt indhold på siden -->
 <body>
 
+<header>
+    <div class="h_place">
+        <div class="h_grid">
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdown_btn">
+                        <i class="fa fa-bars fa-3x"></i>
+                    </button>
+
+                    <div class="h_help">
+                        <div class="h_content">
+
+                            <div class="h_menu1">
+                                <a href="vine.html">Vores vine</a>
+                            </div>
+
+                            <div class="h_menu2">
+                                <a href="history.html">Vores historie</a>
+                            </div>
+
+                            <div class="h_menu3">
+                                <a href="vinblog.html">Blog</a>
+                            </div>
+
+                            <div class="h_menu4">
+                                <a href="contact.html">Kontakt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="h_logo">
+                <a href="index.html">
+                    <img src="images/Logo_roed.png">
+                </a>
+            </div>
+            <div class="h_subscribe">
+
+                <div class="sub">
+                    <button class="sub_button">
+                        Tilmeld nyhedsbrev
+                    </button>
+                </div>
+
+                <div class="h_placeholder">
+                    <input type="email" placeholder="e-mail">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="grid_boi">
 <div class="main">
     <section>
         <div class="parallax">
@@ -117,7 +171,36 @@
 
 </div>
 </div>
-</div>
+
+
+<footer>
+    <div class="Forhandlere">
+        <h3>Forhandlere:</h3>
+        <p>Føtex</p>
+        <p>Kvickly</p>
+        <p>Meny</p>
+        <p>Bilka</p>
+        <p>Diverse vinforhandlere</p>
+    </div>
+
+    <div class="Nederst">
+        <div class="informationer">
+            Gade 19, 2400 København<br>
+            +45 12 34 56 78<br>
+            kontakt@dominiodepontas.com<br>
+            <br><br>
+            Camino 67, 31500 Tudela, Spanien<br>
+            +34 902 12 34 56<br>
+            conmutador@dominiodepontas.com<br>
+        </div>
+
+        <div class="SoMe">
+            <h3>Følg os</h3>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </div>
+</footer>
 
 <br><br>
 
@@ -127,10 +210,36 @@
 
 
 <script>
-    type = "text/javascript" >
+    //type = "text/javascript" >
         $(document).ready(function (e) {
 
-        });
+
+            var navOpen = 0;
+
+            $(".dropdown_btn").click(function () {
+                if (navOpen == 1) {
+                    $(".h_content").stop().slideUp(200);
+                    navOpen = 0;
+                }
+                else {
+                    $(".h_content").stop().slideDown(200);
+                    navOpen = 1;
+                }
+            });
+
+            $(window).resize(function (e) {
+                var width = $(window).width();
+
+                if (width > 1200) {
+                    $(".h_content").css({"display": "-webkit-flex", "display": "flex"});
+                }
+                else {
+                    $(".h_content").css("display", "none");
+                    navOpen = 0;
+                }
+            });
+
+/*
 
     $("#js-rotating").Morphext({
         // The [in] animation type. Refer to Animate.css for a list of available animations.
@@ -152,7 +261,9 @@
         $("#info2").slideToggle("slow");
     });
 
+*/
 
+        });
 
 </script>
  

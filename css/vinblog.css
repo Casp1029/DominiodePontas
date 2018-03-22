@@ -3,7 +3,106 @@
   box-sizing: border-box; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  display: grid;
+  grid-template-rows: 60px auto auto;
+  grid-template-columns: 1fr; }
+
+button {
+  text-decoration: none;
+  border: none;
+  outline: none; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+header {
+  grid-row: 1; }
+
+.h_place {
+  z-index: 10;
+  position: fixed;
+  width: 100%; }
+
+.h_grid {
+  background-color: white;
+  height: 54px;
+  padding-top: 1px; }
+
+.h_logo {
+  background-size: cover;
+  height: 50px;
+  width: 100px;
+  margin: 6px 0 0 2px; }
+
+#home {
+  height: 100%;
+  width: 100%; }
+
+.dropdown {
+  position: relative; }
+
+.fa-bars {
+  color: #781616; }
+
+.dropdown_btn {
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  right: 12px;
+  top: 7px; }
+
+.dropdown_btn:hover {
+  cursor: pointer; }
+
+.h_content {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  min-width: 80%;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  outline: 5px auto #5d5d5d; }
+
+.h_content a {
+  color: black;
+  padding: 10px;
+  margin: auto;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  font-family: "Goudy Old Style", Times New Roman; }
+
+.h_content a:hover {
+  color: #781616;
+  font-weight: bold; }
+
+.sub_button {
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  background-color: #781616;
+  border-radius: 2px;
+  border: none;
+  width: 150px;
+  height: 30px;
+  margin-right: 15px; }
+
+.sub_button:hover {
+  cursor: pointer;
+  background-color: #9a3d3d; }
+
+/*
+.dropdown:hover .h_content {
+  display: block; }
+*/
+.h_subscribe {
+  display: none; }
 
 .morphext > .animated {
   display: inline-block; }
@@ -164,11 +263,9 @@ article2 {
 .knap:hover {
   background-color: #9a3d3d; }
 
-img:hover {
-  opacity: 0.8;
-  background-color: #9a3d3d;
-  filter: alpha(opacity=50);
-  /* For IE8 and earlier */ }
+.grid_boi {
+  grid-row: 2/3;
+  grid-column: 1; }
 
 .visually-hidden {
   clip: rect(1px, 1px, 1px, 1px);
@@ -177,6 +274,30 @@ img:hover {
   position: absolute;
   white-space: nowrap;
   width: 1px; }
+
+footer {
+  background-color: #781616;
+  color: white;
+  line-height: 12pt;
+  font-family: "Goudy Old Style";
+  grid-row: 6; }
+
+.informationer {
+  font-size: 12px;
+  float: left; }
+
+.SoMe {
+  float: right;
+  text-align: center;
+  font-size: 25px; }
+
+.Nederst {
+  width: 75%;
+  margin: 0 auto; }
+
+.Forhandlere {
+  margin: 10% auto;
+  width: 30%; }
 
 a:hover .visually-hidden,
 a:focus .visually-hidden,
@@ -207,6 +328,12 @@ img {
   height: auto; }
 
 @media screen and (min-width: 992px) {
+  h3 {
+    font-size: 15px; }
+
+  p {
+    font-size: 12pt; }
+
   .flex-container {
     display: flex;
     flex-direction: row; }
@@ -227,8 +354,115 @@ img {
   .author {
     width: 200px;
     margin-left: 50px;
-    text-align: center; } }
+    text-align: center; }
+
+  .i_tekst {
+    width: 40%;
+    font-size: 20px; }
+
+  .Forhandlere {
+    width: 20%;
+    float: left;
+    margin: 0;
+    margin-left: 15%; }
+
+  .Nederst {
+    width: 40%;
+    float: right;
+    margin: 0;
+    margin-right: 15%; }
+
+  .informationer {
+    float: right;
+    font-size: 13px; }
+
+  .SoMe {
+    float: left;
+    font-size: 35px; }
+
+  footer {
+    padding-top: 20px; } }
 image:hover {
   background-color: floralwhite; }
+
+@media screen and (min-width: 1200px) {
+  .h_grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr;
+    height: 130px;
+    padding-top: 0; }
+
+  .h_logo {
+    grid-row: 1;
+    grid-column: 1;
+    background-size: cover;
+    height: 120px;
+    width: 200px;
+    margin: 6px 0 0 2px; }
+
+  nav {
+    grid-column: 2; }
+
+  .dropdown {
+    position: relative; }
+
+  .fa-bars {
+    color: #781616; }
+
+  .dropdown_btn {
+    display: none;
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    right: 12px;
+    top: 1px; }
+
+  .dropdown:hover .h_content {
+    display: flex; }
+
+  .h_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    position: static;
+    z-index: 3;
+    min-width: 0;
+    top: 0;
+    right: 0;
+    outline: 0; }
+
+  .h_content:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    position: static;
+    z-index: 3;
+    min-width: 0;
+    top: 0;
+    right: 0; }
+
+  .h_subscribe {
+    grid-column: 3;
+    display: flex;
+    margin-top: 47px;
+    justify-content: center; }
+
+  .h_placeholder {
+    height: 30px;
+    width: 300px;
+    outline: 5px auto #5d5d5d; }
+
+  .h_placeholder input {
+    width: 100%;
+    height: 100%;
+    background-color: #d5d5d5;
+    color: #000000;
+    padding-left: 5px;
+    border: 0;
+    -webkit-appearance: none; } }
 
 /*# sourceMappingURL=vinblog.css.map */
