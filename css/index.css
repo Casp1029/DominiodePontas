@@ -169,6 +169,11 @@ header {
   border: none;
   margin-bottom: 30px; }
 
+.knap_a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none; }
+
 .knap:hover {
   background-color: #9a3d3d; }
 
