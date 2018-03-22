@@ -202,10 +202,10 @@ header {
 
 //Casper start--------------------------------------------------------
 
-.products {
+#products {
   grid-row: 3;
   display: grid;
-  grid-template-rows: 50px auto auto auto; }
+  grid-template-rows: 100px auto auto auto; }
 
 .productsgrid {
   grid-row: 2;
@@ -375,10 +375,10 @@ header {
 
 .p-mobile {
   grid-row: 3;
-  grid-column: 2 / span 2;
+  grid-column: 1 / span 4;
   color: white;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .slider-demoMobile {
@@ -603,6 +603,9 @@ footer{
     width: auto;
   }
 
+  .p-mobile {
+    grid-column: 2 /span 2;
+  }
 
 
 //Sabine slut -------------------------------------------------
@@ -623,7 +626,7 @@ footer{
   }
 
   p {
-    font-size: 15pt;
+    font-size: 12pt;
   }
 
   //Cecilie start-----------------------------------------------------
@@ -676,7 +679,7 @@ footer{
 
   //Casper start---------------------------------------------------
 
-  .products {
+  #products {
     grid-row: 3;
     display: grid;
     grid-template-rows: auto auto;
@@ -717,7 +720,7 @@ footer{
   }
 
   .productscabernet {
-    grid-row: 1 /span2;
+    grid-row: 1 / span 2;
     grid-column: 1;
     display: flex;
     flex-direction: column;
@@ -744,7 +747,7 @@ footer{
   }
 
   .productstempranillo {
-    grid-row: 1 /span2;
+    grid-row: 1 / span 2;
     grid-column: 2;
     display: flex;
     flex-direction: column;
@@ -771,7 +774,7 @@ footer{
   }
 
   .productschardonnay {
-    grid-row: 1 /span2;
+    grid-row: 1 / span 2;
     grid-column: 3;
     display: flex;
     flex-direction: column;
@@ -798,6 +801,24 @@ footer{
   }
 
   /* VINE UNDERSIDE */
+
+  .fa-times {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+  }
+
+  .VINEdropdownlinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+.VINEdropdownlinks a {
+  text-decoration: none;
+  color: white;
+}
 
   .VINEcabernetsauvignont {
     display: grid;
@@ -860,14 +881,6 @@ footer{
     background-color: $red;
     justify-content: center;
     align-items: center;
-  }
-
-  .fa-times {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-
   }
 
   .VINEtempranillo {
