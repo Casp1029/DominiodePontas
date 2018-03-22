@@ -3,10 +3,104 @@
   box-sizing: border-box; }
 
 body {
-  margin: 0;
-  display: grid;
-  grid-template-rows: 200px 200px 200px 200px 200px 200px;
-  grid-template-columns: 1fr; }
+  margin: 0; }
+
+.morphext > .animated {
+  display: inline-block; }
+
+.picture {
+  background: url(" ../images/billede.jpg") center;
+  width: 100%;
+  height: 600px;
+  background-size: cover; }
+
+.text {
+  color: #ffffff;
+  font-family: "Goudy Old Style";
+  width: 99%;
+  font-size: 40pt;
+  padding-top: 220pt;
+  text-align: center;
+  line-height: 24pt; }
+
+.j_text {
+  font-family: "goudy old style";
+  color: #781616;
+  width: 99%;
+  font-size: 22pt;
+  text-align: center;
+  text-space: 1;
+  padding-top: 3pt; }
+
+.text2 {
+  font-family: "Goudy Old Style";
+  color: #781616;
+  font-size: 22px; }
+
+.flex-container {
+  display: flex;
+  flex-direction: column; }
+
+article {
+  width: 80%;
+  float: left;
+  margin: auto;
+  line-height: 50px; }
+
+article2 {
+  width: 80%;
+  float: right;
+  margin: auto;
+  line-height: 50px; }
+
+article3 {
+  width: 80%;
+  float: right;
+  margin: auto;
+  line-height: 50px; }
+
+h2 {
+  font-family: " Goudy Old Style";
+  color: #781616;
+  font-weight: 300; }
+
+p {
+  font-family: Arial;
+  font-size: 17px;
+  line-height: 24px; }
+
+.knap {
+  width: 100px;
+  height: 35px;
+  background-color: #781616;
+  font-family: Arial;
+  font-size: 13px;
+  color: white;
+  border-radius: 5px; }
+
+.knap:hover {
+  background-color: #9a3d3d; }
+
+img:hover {
+  opacity: 0.8;
+  background-color: #9a3d3d;
+  filter: alpha(opacity=50);
+  /* For IE8 and earlier */ }
+
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+
+a:hover .visually-hidden,
+a:focus .visually-hidden,
+button:hover .visually-hidden,
+button:focus .visually-hidden {
+  position: relative;
+  margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -29,127 +123,20 @@ img {
   max-width: 100%;
   height: auto; }
 
-header {
-  grid-row: 1; }
-
-.index {
-  grid-row: 2; }
-
-.img {
-  background-image: url(../images/indexbillede.jpg); }
-
-.i_grid {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: 1fr; }
-
-.i_billede {
-  background: url("../images/indexbillede.jpg") center no-repeat;
-  width: 100%;
-  height: 200%;
-  background-size: cover; }
-
-.i_tekst {
-  color: white;
-  font-family: "Goudy Old Style";
-  width: 99%;
-  font-size: 14pt;
-  padding-top: 80pt;
-  text-align: center;
-  line-height: 24pt;
-  grid-row: 1 / span 1;
-  grid-column: 3 / span 14;
-  margin-top: 45px;
-  margin: 45px auto 0 auto; }
-
-.knap {
-  width: 180px;
-  height: 40px;
-  background-color: #781616;
-  font-family: Arial;
-  font-size: 15px;
-  color: white;
-  border-radius: 5px;
-  margin-left: 30%;
-  margin-right: 30%; }
-
-.knap:hover {
-  background-color: #9a3d3d; }
-
-.products {
-  grid-row: 3; }
-
-.history {
-  grid-row: 4; }
-
-.about_us {
-  grid-row: 5; }
-
-.footer {
-  grid-row: 6; }
-
-.Forhandlere {
-  margin: 10% auto;
-  width: 30%; }
-
-h3 {
-  font-size: 14px;
-  font-weight: 300; }
-
-footer {
-  background-color: #781616;
-  color: white;
-  line-height: 12pt;
-  font-family: "Goudy Old Style"; }
-
-p {
-  font-size: 12px; }
-
-.informationer {
-  font-size: 12px;
-  float: left; }
-
-.SoMe {
-  float: right;
-  text-align: center;
-  font-size: 25px; }
-
-.Nederst {
-  width: 75%;
-  margin: 0 auto; }
-
 @media screen and (min-width: 992px) {
-  .i_tekst {
-    width: 40%;
-    font-size: 20px; }
+  .flex-container {
+    display: flex;
+    flex-direction: row; }
 
-  .Forhandlere {
-    width: 20%;
-    float: left;
-    margin: 0;
-    margin-left: 15%; }
+  article {
+    width: 48%;
+    padding-left: 9%; }
 
-  h3 {
-    font-size: 15px; }
-
-  p {
-    font-size: 13px; }
-
-  .Nederst {
-    width: 40%;
-    float: right;
-    margin: 0;
-    margin-right: 15%; }
-
-  .informationer {
-    float: right;
-    font-size: 13px; }
-
-  .SoMe {
-    float: left;
-    font-size: 35px; }
-
-  footer {
-    padding-top: 4%; } }
+  article2 {
+    width: 48%;
+    padding-right: 9%;
+    margin: inherit; } }
+image:hover {
+  background-color: floralwhite; }
 
 /*# sourceMappingURL=index.css.map */
