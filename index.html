@@ -24,26 +24,23 @@
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
 
-    <meta property="og:title" content="titel">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.domain.dk">
+    <meta property="og:title" content="Vin fra Dominio de Pontas">
+    <meta property="og:type" content="spansk.vin">
+    <meta property="og:url" content="http://www.dominiodepontas.dk">
     <meta property="og:image" content="https://www.domain.dk/img.jpg">
-    <meta property="og:description" content="Beskrivelse">
+    <meta property="og:description" content="Er du vild med god kvalitetsvin vin, så har Dominio de Pontas en af de bedste af slagsen.
+    Vi er en danskejet vingård beliggende i det nordlige spanien, i vinområdet Navarra.">
     <meta property="og:locale" content="da_DK">
-
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/index.css" rel="stylesheet" type="text/css">
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
 </head>
 
+<body>
 <!-- i <body> har man alt indhold på siden -->
-
 <header>
     <div class="h_place">
         <div class="h_grid">
@@ -74,7 +71,6 @@
                         </div>
                     </div>
                 </div>
-
             </nav>
             <div class="h_logo">
                 <a href="index.html">
@@ -96,16 +92,12 @@
             </div>
         </div>
     </div>
-
 </header>
 
 
 <section class="index">
-
     <div class="i_grid">
-
     </div>
-
     <div class="i_billede">
         <div class="i_tekst">
             Se vores udvalg af udsøgte vine fra vingården
@@ -113,69 +105,38 @@
             Navarra område i det nordlige Spanien</div>
         <br>
         <center><button class="knap">Se vores udvalg</button></center>
-
-
     </div>
-
 </section>
 
 
-
-
 <section class="products">
-
-
-
     <h1>Vine</h1>
-
     <div class="productsgrid">
-
-
         <div class="productscabernet">
-
-
             <div><img src="images/flaskecabernetsauvignont.png" class="flaskecabernetsauvignont"></div>
             <div><h2>Cabernet Sauvignon</h2></div>
             <div id="productstext1"><p>Vores Cabernet Sauvignon rødvin er brygget af druer af meget høj kvalitet. </p>
                 <a class="mereomcabernetsauvignon" href="vine.html">Mere om Cabernet Sauvignon</a>
             </div>
-
-
         </div>
 
-
         <div class="productstempranillo">
-
-
             <div><img src="images/flasketempranillo.png" class="flasketempranillo"></div>
             <div><h2>Tempranillo</h2></div>
             <div id="productstext2"><p>Tempranillo vindruen vokser kun godt i Nordspanien. Her er Dominio de Pontas gården også placeret.</p>
                 <a class="mereomtempranillo" href="vine.html">Mere om Tempranillo</a>
             </div>
-
-
         </div>
 
-
         <div class="productschardonnay">
-
-
             <div><img src="images/flaskechardonnaypng.png" class="flaskechardonnaypng"></div>
             <div><h2>Chardonnay</h2></div>
             <div id="productstext3"><p>Vores Chardonnay hvidvin brygges af druer af højeste kvalitet.</p>
                 <a class="mereomchardonnay" href="vine.html">Mere om Chardonnay</a>
             </div>
-
-
         </div>
-
-
     </div>
-
-
-
 </section>
-
 
 <section class="about_us">
     <div class="dominio-grid">
@@ -214,14 +175,11 @@
     </div>
 </section>
 
-
-  
 <section class="history">
     <div class="his_grid">
         <div class="his_head">
             <h1>Vores Historie</h1>
         </div>
-
 
         <div class="his_pic_flex">
             <div class="his_pic1"></div>
@@ -251,8 +209,6 @@
 
 
 <footer>
-
-
     <div class="Forhandlere">
         <h3>Forhandlere:</h3>
         <p>Føtex</p>
@@ -261,7 +217,6 @@
         <p>Bilka</p>
         <p>Diverse vinforhandlere</p>
     </div>
-
 
     <div class="Nederst">
         <div class="informationer">
@@ -279,22 +234,19 @@
             <i class="fab fa-facebook-square"></i>
             <i class="fab fa-instagram"></i>
         </div>
-
     </div>
-
 </footer>
 
+<a href="javascript:" id="btn" title="to top"><i class="fas fa-angle-up"></i></a>
 
+
+<!--JavaScript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="jquery/jquery.bscslider.js"></script>
 <link rel="stylesheet" href="css/jquery.bscslider.css">
-
-
         <script>
         $(document).ready(function(e)  {
             
-            
-
             var navOpen = 0;
 
             $(".dropdown_btn").click(function () {
@@ -306,7 +258,6 @@
                     $(".h_content").stop().slideDown(200);
                     navOpen = 1;
                 }
-
             });
 
             /* $(document).click(function (e) {
@@ -334,8 +285,6 @@
             });
             
 
-
-   
         $('.slider-demoMobile').bscSlider({
             // options here
             effect: 17
@@ -350,14 +299,20 @@
             // options here
             effect: 17
         });
+  
+              $(window).scroll(function() {
+                if ($(this).scrollTop() >= 50) { //Hvis man scroller mere end 50 px
+                    $('#btn').fadeIn(200);
+                } else {
+                    $('#btn').fadeOut(200);
+                }
+            });
+            $('#btn').click(function() {
+                $('body,html').animate({
+                    scrollTop : 0
+                }, 500);
+            });
     });
-
 </script>
-
-
-
-
 </body>
-
-
 </html>
