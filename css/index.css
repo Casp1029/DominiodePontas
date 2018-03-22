@@ -584,10 +584,21 @@ textarea {
   text-decoration: none;
   color: white; }
 
-/*Stående tablet*/
+/*St├Ñende tablet*/
 @media screen and (min-width: 768px) {
+  .p-mobile {
+    grid-row: 6 / span 2;
+    grid-column: 3 / span 10;
+    text-align: center; }
+
   .slider-demoMobile {
     display: none; }
+
+  .slider-demo768og992 {
+    display: grid;
+    grid-column: 2 / span 2;
+    height: auto;
+    width: auto; }
 
   .contact-img {
     grid-row: 1;
@@ -605,28 +616,16 @@ textarea {
     grid-row: 2;
     grid-column: 5 / span 3; }
 
-  .slider-demo768og992 {
-    display: grid;
-    grid-column: 2 / span 2;
-    height: auto;
-    width: auto; }
-
   .error {
     grid-row: 3 / span 2;
     grid-column: 2 / span 4; } }
 /*Liggende tablet*/
-
 @media screen and (min-width: 992px) {
   h3 {
     font-size: 15px; }
 
   p {
-    font-size: 15pt; }
-  
-    .dominio-grid {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr; }
+    font-size: 12pt; }
 
   .i_tekst {
     width: 40%;
@@ -654,6 +653,11 @@ textarea {
 
   footer {
     padding-top: 4%; }
+
+  .dominio-grid {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
 
   .products {
     grid-row: 3;
@@ -929,8 +933,7 @@ textarea {
     background-color: #781616;
     justify-content: center;
     align-items: center; } }
-
-/*Computerskærm*/
+/*Computersk├ªrm*/
 @media screen and (min-width: 1200px) {
   body {
     grid-template-rows: 150px 500px auto auto auto 200px; }
@@ -1021,6 +1024,9 @@ textarea {
     grid-row: 1;
     grid-column: 1 / span 4; }
 
+  .p-mobile {
+    grid-column: 2 / span 2; }
+
   .slider-demo768og992 {
     display: none; }
 
@@ -1029,9 +1035,6 @@ textarea {
     grid-column: 2 / span 2;
     height: auto;
     width: auto; }
-
-  .p-mobile {
-    grid-column: 2 / span 2; }
 
   .his_grid {
     display: grid;
@@ -1084,8 +1087,9 @@ textarea {
     font-size: 15px;
     grid-column: 2/3;
     padding-left: 150px; }
-    .hu_text1 p {
-      text-align: left; }
+
+  p {
+    text-align: left; }
 
   .hu_grid {
     display: grid;
@@ -1137,18 +1141,17 @@ textarea {
     z-index: 12; }
 
   .full_img1 {
-    background: url(../images/vin1.jpeg) no-repeat center;
+    background: url(../images/vin1.jpg) no-repeat center;
     background-size: contain; }
 
   .full_img2 {
-    background: url(../images/vin2.jpeg) no-repeat center;
+    background: url(../images/vin2.jpg) no-repeat center;
     background-size: contain; }
 
   .full_img3 {
     background: url(../images/vin3.jpg) no-repeat center;
     background-size: contain; }
 
-  /*Fejl-404-side*/
   .error-page h1 {
     font-size: 120px;
     margin: 50px 0 0 0; }
