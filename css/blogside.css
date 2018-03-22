@@ -1,0 +1,73 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+background-color: #9a3d3d}
+
+article {
+  width: 90%;
+  line-height: 50px;
+  margin: auto; }
+
+img {
+  width: 90%;
+  margin: auto; }
+
+.b1 {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  padding: 5%; }
+
+h1 {
+  font-size: 37px;
+  font-family: "Goudy Old Style";
+  font-weight: inherit; }
+
+h2 {
+  font-family: "Goudy Old Style";
+  font-size: 30px; }
+
+p {
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 33px; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; }
+
+li {
+  margin: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+@media screen and (min-width: 1200px) {
+  img {
+    width: 75%;
+    margin-top: 2%; }
+
+  .b1 {
+    width: 75%;
+    padding: 40px;
+    margin-bottom: 2%; }
+
+  h1 {
+    font-size: 35pt;
+    margin-top: 20pt; } }
+
+/*# sourceMappingURL=blogside.css.map */
