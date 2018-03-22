@@ -339,7 +339,7 @@ header {
 .his_grid {
   display: grid;
   grid-template-columns: 20px 1fr 20px;
-  grid-template-rows: 80px 115px 2fr;
+  grid-template-rows: 80px 115px 2fr 50px;
   height: 100%;
   width: 100%; }
 
@@ -349,6 +349,24 @@ header {
 
 .his_head h1 {
   color: #000000; }
+
+.history_read {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  grid-row: 4;
+  grid-column: 2/3;
+  text-decoration: none; }
+  .history_read button {
+    text-align: center;
+    font-family: Arial;
+    color: white;
+    background-color: #781616;
+    border-radius: 2px;
+    border: none; }
+  .history_read button:hover {
+    cursor: pointer;
+    background-color: #9a3d3d; }
 
 .his_pic_flex {
   grid-column: 2;
@@ -398,7 +416,8 @@ header {
   display: flex;
   width: 100%;
   height: 100px;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin-top: 18px; }
 
 .hu_pic1 {
   background: url("../images/vin1.jpg") no-repeat center; }
@@ -415,10 +434,12 @@ header {
   margin: auto 3px auto 3px;
   background-size: contain; }
 
-.hu_text1, .hu_text2 {
+.hu_text1 {
   font-family: Arial;
   font-size: 15px;
   text-align: center; }
+  .hu_text1 p {
+    line-height: 24px; }
 
 footer {
   background-color: #781616;
@@ -1039,7 +1060,7 @@ textarea {
   .his_grid {
     display: grid;
     grid-template-columns: 92px 1fr 92px;
-    grid-template-rows: 130px 140px 180px;
+    grid-template-rows: 130px 140px 50px 180px;
     height: 100%;
     width: 100%; }
 
@@ -1051,14 +1072,11 @@ textarea {
     color: #000000; }
 
   .his_help {
-    display: grid;
-    grid-template-rows: 0;
-    grid-template-columns: 1fr 1fr;
     height: 100%;
     width: 100%; }
 
-  .his_text1, .his_text2 {
-    margin: 12px; }
+  .his_text1 {
+    margin: 25px 200px; }
 
   .his_text1 {
     grid-column: 1; }
@@ -1068,10 +1086,13 @@ textarea {
 
   .his_pic_flex {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 4;
     display: flex;
     justify-content: space-evenly;
     margin: 15px 190px 20px 190px; }
+
+  .history_read {
+    grid-row: 3; }
 
   .his_text_flex {
     grid-column: 2;
@@ -1124,12 +1145,12 @@ textarea {
   .black {
     display: none;
     position: absolute;
-    height: 155%;
+    height: 171%;
     width: 100%;
     background-color: black;
     z-index: 11;
     opacity: 0.5;
-    top: -60px; }
+    top: -150px; }
 
   .full_img1, .full_img2, .full_img3 {
     display: none;
