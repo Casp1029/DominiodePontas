@@ -220,6 +220,46 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
     $(document).ready(function (e) {
+
+        var navOpen = 0;
+
+        $(".dropdown_btn").click(function () {
+            if (navOpen == 1) {
+                $(".h_content").stop().slideUp(200);
+                navOpen = 0;
+            }
+            else {
+                $(".h_content").stop().slideDown(200);
+                navOpen = 1;
+            }
+
+        });
+
+        /* $(document).click(function (e) {
+            e.stopPropagation();
+            var container = $(".h_content, .dropdown_btn");
+
+            //check if the clicked area is dropDown or not
+            if (container.has(e.target).length === 0) {
+                $(".h_content").slideUp(500);
+                navOpen = 0;
+            }
+        }) */
+
+
+        $(window).resize(function (e) {
+            var width = $(window).width();
+
+            if (width > 1200) {
+                $(".h_content").css({"display": "-webkit-flex", "display": "flex"});
+            }
+            else {
+                $(".h_content").css("display", "none");
+                navOpen = 0;
+            }
+        });
+
+
         var VINEopen = 0;
         $(".VINEdropdowncabernetclick").click(function () {
         if (VINEopen == 0) {
