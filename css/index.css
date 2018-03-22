@@ -152,10 +152,10 @@ header {
   padding-top: 80pt;
   text-align: center;
   line-height: 24pt;
+  padding-bottom: 60px;
   grid-row: 1 / span 1;
   grid-column: 3 / span 14;
-  margin-top: 45px;
-  margin: 45px auto 0 auto; }
+  margin: 0 auto 0 auto; }
 
 .knap {
   height: 40px;
@@ -166,7 +166,8 @@ header {
   border-radius: 5px;
   margin-left: 30%;
   margin-right: 30%;
-  border: none; }
+  border: none;
+  margin-bottom: 30px; }
 
 .knap:hover {
   background-color: #9a3d3d; }
@@ -673,7 +674,7 @@ textarea {
     font-size: 35px; }
 
   footer {
-    padding-top: 4%; }
+    padding-top: 20px; }
 
   .dominio-grid {
     display: grid;
@@ -957,7 +958,7 @@ textarea {
 /*Computersk├ªrm*/
 @media screen and (min-width: 1200px) {
   body {
-    grid-template-rows: 150px 500px auto auto auto 200px; }
+    grid-template-rows: 150px auto auto auto auto 200px; }
 
   h1 {
     font-size: 46pt; }
