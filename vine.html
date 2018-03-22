@@ -103,12 +103,13 @@
     </div>
 
     <div class="VINEtekstcabernet">
-        <p>Brygget af druer plukket på Navarras solrige bakker, har vores Cabernet Sauvignont vin en dyb mættet rød farve, og en krydret smag, der næsten ubetinget falder i god smag hos enhver vindrikker. Flere ingredienser gør, sammen med druerne fra denne del af Spanien, vinen til en unik oplevelse.</p>
+        <p>Brygget af druer plukket på Navarras solrige bakker, har vores Cabernet Sauvignon vin en dyb mættet rød farve, og en krydret smag, der næsten ubetinget falder i god smag hos enhver vindrikker. Flere ingredienser gør, sammen med druerne fra denne del af Spanien, vinen til en unik oplevelse.</p>
     </div>
 
     <div class="VINEdropdowncabernet">
         <div class="VINEdropdowncabernetclick">Forhandlere</div>
         <div class="VINEdropdowncabernetcontent">
+            <i class="fa fa-times fa-1x"></i>
             Føtex <br>
             Kvickly <br>
             Meny <br>
@@ -134,6 +135,7 @@
     <div class="VINEdropdowntempranillo">
         <div class="VINEdropdowntempranilloclick">Forhandlere</div>
         <div class="VINEdropdowntempranillocontent">
+            <i class="fa fa-times fa-1x"></i>
             Føtex <br>
             Kvickly <br>
             Meny <br>
@@ -157,8 +159,9 @@
     </div>
 
     <div class="VINEdropdownchardonnay">
-        <div class="VINEdropdowntempranilloclick">Forhandlere</div>
-        <div class="VINEdropdowntempranillocontent">
+        <div class="VINEdropdownchardonnayclick">Forhandlere</div>
+        <div class="VINEdropdownchardonnaycontent">
+            <i class="fa fa-times fa-1x"></i>
             Føtex <br>
             Kvickly <br>
             Meny <br>
@@ -214,17 +217,114 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
     $(document).ready(function (e) {
-        // Din kode her
+        var VINEopen = 0;
         $(".VINEdropdowncabernetclick").click(function () {
-            $(".VINEdropdowncabernetcontent").slideToggle();
+        if (VINEopen == 0) {
+            $(".VINEdropdowncabernetcontent").animate(
+                {
+                    height: '160px',
+                    width: '200px',
+                    fontSize: '12pt',
+                    lineHeight: '16pt'
+                }, 500 );
+
+            $(".VINEdropdowncabernetcontent").css(
+                {
+                    display: 'flex'
+                });
+                VINEopen = 1;
+
+            }
+
+            $(".fa-times").click(function () {
+                if (VINEopen == 1) {
+                $(".VINEdropdowncabernetcontent").animate(
+                    {
+                        height: '0px',
+                        width: '0px',
+                        fontSize: '0pt',
+                        lineHeight: '0pt'
+                    }, 200 );
+
+
+                VINEopen = 0;
+                }
+            })
         })
 
+
+
+
+        var VINEopen2 = 0;
         $(".VINEdropdowntempranilloclick").click(function () {
-            $(".VINEdropdowntempranillocontent").slideToggle();
+            if (VINEopen2 == 0) {
+                $(".VINEdropdowntempranillocontent").animate(
+                    {
+                        height: '160px',
+                        width: '200px',
+                        fontSize: '12pt',
+                        lineHeight: '16pt'
+                    }, 500 );
+
+                $(".VINEdropdowntempranillocontent").css(
+                    {
+                        display: 'flex'
+                    });
+                VINEopen2 = 1;
+
+            }
+
+            $(".fa-times").click(function () {
+                if (VINEopen2 == 1) {
+                    $(".VINEdropdowntempranillocontent").animate(
+                        {
+                            height: '0px',
+                            width: '0px',
+                            fontSize: '0pt',
+                            lineHeight: '0pt'
+                        }, 200 );
+
+
+                    VINEopen2 = 0;
+                }
+            })
         })
 
+
+
+        var VINEopen3 = 0;
         $(".VINEdropdownchardonnayclick").click(function () {
-            $(".VINEdropdownchardonnaycontent").slideToggle();
+            if (VINEopen2 == 0) {
+                $(".VINEdropdownchardonnaycontent").animate(
+                    {
+                        height: '160px',
+                        width: '200px',
+                        fontSize: '12pt',
+                        lineHeight: '16pt'
+                    }, 500 );
+
+                $(".VINEdropdownchardonnaycontent").css(
+                    {
+                        display: 'flex'
+                    });
+                VINEopen3 = 1;
+
+            }
+
+            $(".fa-times").click(function () {
+                if (VINEopen3 == 1) {
+                    $(".VINEdropdownchardonnaycontent").animate(
+                        {
+                            height: '0px',
+                            width: '0px',
+                            fontSize: '0pt',
+                            lineHeight: '0pt'
+                        }, 200 );
+
+
+                    VINEopen3 = 0;
+                }
+            })
         })
 
     });

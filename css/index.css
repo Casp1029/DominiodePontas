@@ -185,6 +185,9 @@ header {
   flex-direction: column;
   align-items: center; }
 
+.mereomcabernetsauvignon {
+  display: none; }
+
 .flaskecabernetsauvignont {
   height: 500px;
   margin-bottom: 25px; }
@@ -195,6 +198,9 @@ header {
   flex-direction: column;
   align-items: center; }
 
+.mereomtempranillo {
+  display: none; }
+
 .flasketempranillo {
   height: 500px;
   margin-bottom: 25px; }
@@ -204,6 +210,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.mereomchardonnay {
+  display: none; }
 
 .flaskechardonnaypng {
   height: 500px;
@@ -283,37 +292,38 @@ header {
   display: none; }
 
 .about_us {
-  grid-row: 4; }
+  grid-row: 4;
+  background: url("../images/dominiooverlay.jpg") center no-repeat; }
 
 .dominio-grid {
   display: grid;
-  grid-template-rows: repeat(8, 80px);
-  grid-template-columns: repeat(14, 1fr); }
-
-.about_us img {
-  grid-row: 1 / span 8;
-  grid-column: 1 / span 14;
-  width: 100%;
-  height: 100%; }
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: rgba(78, 16, 16, 0.85); }
 
 .dominio-grid h1 {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 14;
+  grid-row: 1;
+  grid-column: 1 / span 4;
   margin-top: 45px;
   color: white; }
 
 .p-mobile {
-  grid-row: 2 / span 3;
-  grid-column: 2 / span 12;
+  grid-row: 3;
+  grid-column: 2 / span 2;
   color: white;
-  margin-top: 45px; }
+  margin-top: 45px;
+  margin-bottom: 45px; }
 
-.slideshow-container {
-  grid-row: 5 / span 3;
-  grid-column: 2 / span 12; }
+.slider-demoMobile {
+  grid-column: 1 / span 4;
+  height: auto;
+  width: auto; }
 
-.slides {
-  display: block; }
+.slider-demo768og992 {
+  display: none; }
+
+.slider-demo1200 {
+  display: none; }
 
 .history {
   grid-row: 5; }
@@ -442,14 +452,14 @@ footer {
 
 /*St├Ñende tablet*/
 @media screen and (min-width: 768px) {
-  .p-mobile {
-    grid-row: 6 / span 2;
-    grid-column: 3 / span 10;
-    text-align: center; }
+  .slider-demoMobile {
+    display: none; }
 
-  .slideshow-container {
-    grid-row: 3 / span 3;
-    grid-column: 2 / span 6; }
+  .slider-demo768og992 {
+    display: grid;
+    grid-column: 2 / span 2;
+    height: auto;
+    width: auto; }
 
   /*Fejl-404-side*/
   .error {
@@ -490,8 +500,10 @@ footer {
   footer {
     padding-top: 4%; }
 
-  .slideshow-container {
-    grid-column: 2 / span 4; }
+  .dominio-grid {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
 
   .products {
     grid-row: 3;
@@ -510,6 +522,23 @@ footer {
   .productscabernet .productstempranillo .productschardonnay {
     margin-top: 0px; }
 
+  .mereomchardonnay, .mereomcabernetsauvignon, .mereomtempranillo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: Arial;
+    color: white;
+    background-color: #f59c24;
+    border-radius: 2px;
+    border: none;
+    width: 230px;
+    height: 30px;
+    text-decoration: none; }
+
+  .mereomchardonnay:hover, .mereomcabernetsauvignon:hover, .mereomtempranillo:hover {
+    background-color: #f6d452; }
+
   .productscabernet {
     grid-row: 1 /span2;
     grid-column: 1;
@@ -525,11 +554,13 @@ footer {
     background-color: rgba(78, 16, 16, 0.85);
     position: absolute;
     color: white;
-    padding: 100px 60px 60px 60px;
+    padding: 250px 60px 60px 60px;
+    flex-direction: column;
     align-items: center; }
 
   .flaskecabernetsauvignont {
     height: 500px;
+    margin-top: 50px;
     margin-bottom: 25px; }
 
   .productstempranillo {
@@ -547,11 +578,13 @@ footer {
     background-color: rgba(78, 16, 16, 0.85);
     position: absolute;
     color: white;
-    padding: 100px 60px 60px 60px;
+    padding: 250px 60px 60px 60px;
+    flex-direction: column;
     align-items: center; }
 
   .flasketempranillo {
     height: 500px;
+    margin-top: 50px;
     margin-bottom: 25px; }
 
   .productschardonnay {
@@ -569,11 +602,13 @@ footer {
     background-color: rgba(78, 16, 16, 0.85);
     position: absolute;
     color: white;
-    padding: 100px 60px 60px 60px;
+    padding: 250px 60px 60px 60px;
+    flex-direction: column;
     align-items: center; }
 
   .flaskechardonnaypng {
     height: 500px;
+    margin-top: 50px;
     margin-bottom: 25px; }
 
   /* VINE UNDERSIDE */
@@ -618,12 +653,27 @@ footer {
     width: 150px;
     height: 30px; }
 
+  .VINEdropdowncabernetclick:hover {
+    background-color: #9a3d3d; }
+
   .VINEdropdowncabernetcontent {
     display: none;
     font-family: Arial, sans-serif;
-    font-size: 12pt;
-    line-height: 16pt;
-    color: white; }
+    font-size: 0pt;
+    line-height: 0pt;
+    color: white;
+    height: 0;
+    width: 0;
+    position: absolute;
+    background-color: #781616;
+    justify-content: center;
+    align-items: center; }
+
+  .fa-times {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer; }
 
   .VINEtempranillo {
     display: grid;
@@ -661,11 +711,21 @@ footer {
     width: 150px;
     height: 30px; }
 
+  .VINEdropdowntempranilloclick:hover {
+    background-color: #9a3d3d; }
+
   .VINEdropdowntempranillocontent {
     display: none;
     font-family: Arial, sans-serif;
-    font-size: 12pt;
-    line-height: 16pt; }
+    font-size: 0pt;
+    line-height: 0pt;
+    color: white;
+    height: 0;
+    width: 0;
+    position: absolute;
+    background-color: #781616;
+    justify-content: center;
+    align-items: center; }
 
   .VINEchardonnay {
     display: grid;
@@ -692,10 +752,6 @@ footer {
     flex-direction: column; }
 
   .VINEdropdownchardonnayclick {
-    /*color: white;
-    font-family: Arial, sans-serif;
-    font-size: 12pt;
-    line-height: 16pt; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -708,11 +764,21 @@ footer {
     width: 150px;
     height: 30px; }
 
+  .VINEdropdownchardonnayclick:hover {
+    background-color: #9a3d3d; }
+
   .VINEdropdownchardonnaycontent {
     display: none;
     font-family: Arial, sans-serif;
-    font-size: 12pt;
-    line-height: 16pt; } }
+    font-size: 0pt;
+    line-height: 0pt;
+    color: white;
+    height: 0;
+    width: 0;
+    position: absolute;
+    background-color: #781616;
+    justify-content: center;
+    align-items: center; } }
 /*Computersk├ªrm*/
 @media screen and (min-width: 1200px) {
   h1 {
@@ -814,14 +880,20 @@ footer {
     -webkit-appearance: none; }
 
   .dominio-grid h1 {
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 14; }
+    grid-row: 1;
+    grid-column: 1 / span 4; }
 
-  .slideshow-container {
-    grid-column: 2 / span 3; }
+  .slider-demo768og992 {
+    display: none; }
+
+  .slider-demo1200 {
+    display: grid;
+    grid-column: 2 / span 2;
+    height: auto;
+    width: auto; }
 
   .p-mobile {
-    grid-column: 4 / span 8; }
+    grid-column: 2 / span 2; }
 
   .his_grid {
     display: grid;
