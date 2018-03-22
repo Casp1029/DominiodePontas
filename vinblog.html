@@ -1,0 +1,161 @@
+
+<!doctype html>
+<!-- Fortæller det er html5 -->
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da">
+
+<!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
+<head>
+
+    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
+    <meta charset="utf-8">
+
+    <!-- Titel som ses oppe i browserens tab mv. -->
+    <title>Sigende titel</title>
+
+    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+
+    <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/vinblog.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="bower_components/Morphext/dist/morphext.css">
+
+    <link rel="stylesheet" href="morphext.css">
+    <link rel="stylesheet" href="JQuery.scss">
+
+
+    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<!-- i <body> har man alt indhold på siden -->
+<body>
+
+<div class="main">
+    <section>
+        <div class="parallax">
+            <div class="text">Vores vinblog</div>
+            <div class="j_text">Læs om <span id="js-rotating">nyheder, events, opskrifter, tips og tricks</span></center>
+            </div>
+        </div>
+    </section>
+</div>
+
+<br>
+
+<form class="search" action="action_page.php">
+    <input type="text" placeholder="Søg.." name="search">
+    <button id="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<div class="flex-container2">
+<div class="author">
+    <br>
+    <img src="images/author.png"/>
+    <br>
+    <author1>Vinekspert, Jacob Villadsen</author1>
+    <br>
+    <div id="info">Med rødder i det spanske, er Jacob opvokset
+        med kendskab til vinverdenen, og har siden 2013 kunne
+        kalde sig vinekspert. Indlæggene vil handle om opskrifter,
+        vinsmagning og nyheder.
+    </div>
+</div>
+
+    <div class="author">
+        <br>
+        <img src="images/photo-1494571180607-f17765ead771.png">
+        <br>
+        <author2>Vinkonsulent, Kirstine Friis </author2>
+        <br>
+        <div id="info2">Kirstine Friis har mere end 10 års
+            erfaring inden for branchen, og med sin passion
+            og forståelse for vin, deler hun glædeligt ud af
+            rådgivning, guides og tips og tricks.
+            </div>
+    </div>
+
+
+</div>
+
+<br><br>
+
+<div class="flex-container">
+    <article>
+        <img src="images/photo-1519671282429-b44660ead0a7.png"/>
+        <div class="b1">
+            <h1>3 Nemme retter med vin</h1>
+        <p>Mad og vin går hånd i hånd, og ved at tilføre vin i
+            madlavningen, kan man nemt og hurtigt pifte sin ret op.
+            Vi har samlet 3 opskrifter du kan nemt kan gå til, når
+            der kokkereres i køkkenet...
+        </p>
+            <button class="knap" href ="/article/#more">Læs mere</button>
+
+</div>
+    </article>
+
+    <br>
+
+    <article2>
+        <img src="images/photo-14.png"/>
+        <div class="b1">
+        <h1>Guide: Sådan finder du den rette vin</h1>
+        <p>Det er mange spørgsmål, når den rette vin skal findes.
+            Hvad er andledningen? Hvilken vin passer til hvilken
+            mad? Og skal du satse på tør, sød eller fyldig? Vi
+            har samlet en række tips, der...
+        </p>
+            <button class="knap"> <a href="blogside.html">Læs mere</a></button>
+        </div>
+    </article2>
+
+</div>
+</div>
+</div>
+
+<br><br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="bower_components/Morphext/dist/morphext.min.js"></script>
+<script src="morphext.min.js"></script>
+
+
+<script>
+    type = "text/javascript" >
+        $(document).ready(function (e) {
+
+        });
+
+    $("#js-rotating").Morphext({
+        // The [in] animation type. Refer to Animate.css for a list of available animations.
+        animation: "fadeInDown",
+        // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+        separator: ",",
+        // The delay between the changing of each phrase in milliseconds.
+        speed: 1500,
+        complete: function () {
+            // Called after the entrance animation is executed.
+        }
+    });
+
+        $("author1").click(function(){
+            $("#info").slideToggle("slow");
+        });
+
+    $("author2").click(function(){
+        $("#info2").slideToggle("slow");
+    });
+
+
+
+</script>
+ 
+
+</body>
+</html>
