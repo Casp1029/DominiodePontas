@@ -6,7 +6,7 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 150px auto auto auto auto auto;
+  grid-template-rows: 60px auto auto auto auto auto;
   grid-template-columns: 1fr; }
 
 h1 {
@@ -51,9 +51,9 @@ header {
   grid-row: 1; }
 
 .h_place {
+  z-index: 10;
   position: fixed;
-  width: 100%;
-  z-index: 2; }
+  width: 100%; }
 
 .h_grid {
   background-color: white;
@@ -61,7 +61,6 @@ header {
   padding-top: 1px; }
 
 .h_logo {
-  background: url("../images/Logo_roed.png") center no-repeat;
   background-size: cover;
   height: 50px;
   width: 100px;
@@ -84,7 +83,7 @@ header {
   background-color: inherit;
   font-family: inherit;
   right: 12px;
-  top: 1px; }
+  top: 7px; }
 
 .dropdown_btn:hover {
   cursor: pointer; }
@@ -94,7 +93,7 @@ header {
   position: absolute;
   z-index: 3;
   min-width: 80%;
-  top: 40px;
+  top: 50px;
   right: 0;
   background-color: white;
   outline: 5px auto #5d5d5d; }
@@ -113,9 +112,10 @@ header {
   color: #781616;
   font-weight: bold; }
 
+/*
 .dropdown:hover .h_content {
   display: block; }
-
+*/
 .h_subscribe {
   display: none; }
 
@@ -150,7 +150,6 @@ header {
   margin: 45px auto 0 auto; }
 
 .knap {
-  width: 180px;
   height: 40px;
   background-color: #781616;
   font-family: Arial;
@@ -158,7 +157,8 @@ header {
   color: white;
   border-radius: 5px;
   margin-left: 30%;
-  margin-right: 30%; }
+  margin-right: 30%;
+  border: none; }
 
 .knap:hover {
   background-color: #9a3d3d; }
@@ -348,8 +348,22 @@ header {
   display: flex;
   justify-content: space-evenly; }
 
-.his_pic1, .his_pic2, .his_pic3 {
-  background: url("../images/Mobile.jpg") center no-repeat;
+.his_pic1 {
+  background: url("../images/vin1.jpeg") center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  margin: auto 3px auto 3px; }
+
+.his_pic2 {
+  background: url("../images/vin2.jpeg") center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  margin: auto 3px auto 3px; }
+
+.his_pic3 {
+  background: url("../images/vin3.jpeg") center no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -367,10 +381,36 @@ header {
   font-size: 15px;
   text-align: center; }
 
-.a_grid {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr; }
+.history_side {
+  position: relative;
+  grid-row: 2/6;
+  grid-column: 1; }
+
+.hu_pics {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-evenly; }
+
+.hu_pic1 {
+  background: url("../images/vin1.jpg") no-repeat center; }
+
+.hu_pic2 {
+  background: url("../images/vin2.jpg") no-repeat center; }
+
+.hu_pic3 {
+  background: url("../images/vin3.jpg") no-repeat center; }
+
+.hu_pic1, .hu_pic2, .hu_pic3 {
+  height: 70px;
+  width: 70px;
+  margin: auto 3px auto 3px;
+  background-size: contain; }
+
+.hu_text1, .hu_text2 {
+  font-family: Arial;
+  font-size: 15px;
+  text-align: center; }
 
 footer {
   background-color: #781616;
@@ -793,7 +833,6 @@ footer {
   .h_logo {
     grid-row: 1;
     grid-column: 1;
-    background: url(../images/Logo_roed.png) center no-repeat;
     background-size: cover;
     height: 120px;
     width: 200px;
@@ -898,7 +937,7 @@ footer {
   .his_grid {
     display: grid;
     grid-template-columns: 92px 1fr 92px;
-    grid-template-rows: 80px 1fr 2fr;
+    grid-template-rows: 130px 140px 180px;
     height: 100%;
     width: 100%; }
 
@@ -930,11 +969,85 @@ footer {
     grid-row: 3;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 25px; }
+    margin: 15px 190px 20px 190px; }
 
   .his_text_flex {
     grid-column: 2;
     grid-row: 2; }
+
+  .hu_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr; }
+
+  .hu_text1 {
+    font-family: Arial;
+    font-size: 15px;
+    grid-column: 2/3;
+    padding-left: 150px; }
+    .hu_text1 p {
+      text-align: left; }
+
+  .hu_grid {
+    display: grid;
+    grid-template-columns: 100px repeat(2, 1fr) 100px;
+    grid-template-rows: 1fr; }
+
+  .hu_head {
+    padding-top: 15px; }
+
+  .hu_pics {
+    display: flex;
+    grid-column: 3/4;
+    flex-direction: column; }
+
+  .hu_pics {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    grid-column: 3/4;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 90px; }
+
+  .hu_pic1, .hu_pic2, .hu_pic3 {
+    height: 100%;
+    width: 100%;
+    /* margin: auto 3px auto 3px; */
+    background-size: contain;
+    margin: 2px;
+    cursor: pointer; }
+
+  .black {
+    display: none;
+    position: absolute;
+    height: 155%;
+    width: 100%;
+    background-color: black;
+    z-index: 11;
+    opacity: 0.5;
+    top: -60px; }
+
+  .full_img1, .full_img2, .full_img3 {
+    display: none;
+    position: fixed;
+    height: 90%;
+    width: 90%;
+    bottom: 30px;
+    left: 70px;
+    z-index: 12; }
+
+  .full_img1 {
+    background: url(../images/vin1.jpeg) no-repeat center;
+    background-size: contain; }
+
+  .full_img2 {
+    background: url(../images/vin2.jpeg) no-repeat center;
+    background-size: contain; }
+
+  .full_img3 {
+    background: url(../images/vin3.jpg) no-repeat center;
+    background-size: contain; }
 
   /*Fejl-404-side*/
   .error-page h1 {
