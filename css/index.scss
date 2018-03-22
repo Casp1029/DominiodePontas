@@ -1340,18 +1340,13 @@ h1 {
 
     .hu_pics {
       display: flex;
-      grid-column: 3/4;
-      flex-direction: column;
-    }
-
-    .hu_pics {
-      display: flex;
       width: 100%;
       height: 350px;
       grid-column: 3/4;
       flex-direction: column;
       align-items: center;
       padding-right: 90px;
+      margin-bottom: 25px;
     }
 
     .hu_pic1, .hu_pic2, .hu_pic3 {
@@ -1366,7 +1361,7 @@ h1 {
     .black {
       display: none;
       position: absolute;
-      height: 171%;
+      height: 159%;
       width: 100%;
       background-color: black;
       z-index: 11;
