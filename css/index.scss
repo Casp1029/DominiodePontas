@@ -728,12 +728,13 @@ textarea {
 
 /*Stående tablet*/
 @media screen and (min-width: 768px) {
-//Sabine start -------------------------------------------------
-.p-mobile {
-  grid-row: 6 / span 2;
-  grid-column: 3 / span 10;
-  text-align: center; }
-//Sabine slutt -------------------------------------------------
+  //Sabine start -------------------------------------------------
+  .p-mobile {
+    grid-row: 6 / span 2;
+    grid-column: 3 / span 10;
+    text-align: center;
+  }
+  //Sabine slutt -------------------------------------------------
 
   //Slideshow (Casper)
   .slider-demoMobile {
@@ -750,603 +751,605 @@ textarea {
   .p-mobile {
     grid-column: 2 /span 2;
 
-//Kontakt start (Sabine)---------------------------------
-  .contact-img {
-    grid-row: 1;
-    grid-column: 1 / span 8;
-    visibility: visible;
-    width: 100%;
-    margin: 0 auto;
+    //Kontakt start (Sabine)---------------------------------
+    .contact-img {
+      grid-row: 1;
+      grid-column: 1 / span 8;
+      visibility: visible;
+      width: 100%;
+      margin: 0 auto;
 
+    }
+
+    .contact-txt {
+      grid-row: 2;
+      grid-column: 2 / span 3;
+      margin-top: 30px;
+    }
+
+    form {
+      grid-row: 2;
+      grid-column: 5 / span 3;
+    }
+    //Kontakt slut (Sabine)----------------------------------
+
+    //Fejl-404-side start (Sabine)-----------------------------
+    .error {
+      grid-row: 3 / span 2;
+      grid-column: 2 / span 4;
+    }
+    //Fejl-404-side slut (Sabine)-----------------------------
   }
-
-  .contact-txt {
-    grid-row: 2;
-    grid-column: 2 / span 3;
-    margin-top: 30px;
-  }
-
-  form {
-    grid-row: 2;
-    grid-column: 5 / span 3;
-  }
-  //Kontakt slut (Sabine)----------------------------------
-
-//Fejl-404-side start (Sabine)-----------------------------
-.error {
-  grid-row: 3 / span 2;
-  grid-column: 2 / span 4; }
-//Fejl-404-side slut (Sabine)-----------------------------
 }
 
-/*Liggende tablet*/
-@media screen and (min-width: 992px) {
+  /*Liggende tablet*/
+  @media screen and (min-width: 992px) {
 
-  h3 {
-    font-size: 15px;
+    h3 {
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 12pt;
+    }
+
+    //Cecilie start-----------------------------------------------------
+    .i_tekst {
+      width: 40%;
+      font-size: 20px;
+    }
+
+    .Forhandlere {
+      width: 20%;
+      float: left;
+      margin: 0;
+      margin-left: 15%;
+    }
+
+    .Nederst {
+      width: 40%;
+      float: right;
+      margin: 0;
+      margin-right: 15%;
+    }
+
+    .informationer {
+      float: right;
+      font-size: 13px;
+    }
+
+    .SoMe {
+      float: left;
+      font-size: 35px;
+    }
+
+    footer {
+      padding-top: 20px;
+    }
+    //Cecilie slut-----------------------------------------------------
+
+    //Sabine start---------------------------------------------------
+    .dominio-grid {
+      display: grid;
+      grid-template-rows: auto auto auto;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    //Sabine slut---------------------------------------------------
+
+    //Casper start---------------------------------------------------
+
+    #products {
+      grid-row: 3;
+      display: grid;
+      grid-template-rows: auto auto;
+    }
+
+    .productsgrid {
+      grid-row: 2;
+      display: grid;
+      grid-template-rows: 700px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #productstext1, #productstext2, #productstext3 {
+      display: none;
+    }
+
+    .productscabernet .productstempranillo .productschardonnay {
+      margin-top: 0px;
+    }
+
+    .mereomchardonnay, .mereomcabernetsauvignon, .mereomtempranillo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-family: Arial;
+      color: white;
+      background-color: $yellow;
+      border-radius: 2px;
+      border: none;
+      width: 230px;
+      height: 30px;
+      text-decoration: none;
+    }
+
+    .mereomchardonnay:hover, .mereomcabernetsauvignon:hover, .mereomtempranillo:hover {
+      background-color: $yellowhover;
+    }
+
+    .productscabernet {
+      grid-row: 1 / span 2;
+      grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .productscabernet:hover #productstext1 {
+      height: 100%;
+      display: flex;
+      background-color: $redoverlay;
+      position: absolute;
+      color: white;
+      padding: 250px 60px 60px 60px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .flaskecabernetsauvignont {
+      height: 500px;
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+
+    .productstempranillo {
+      grid-row: 1 / span 2;
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .productstempranillo:hover #productstext2 {
+      height: 100%;
+      display: flex;
+      background-color: $redoverlay;
+      position: absolute;
+      color: white;
+      padding: 250px 60px 60px 60px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .flasketempranillo {
+      height: 500px;
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+
+    .productschardonnay {
+      grid-row: 1 / span 2;
+      grid-column: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .productschardonnay:hover #productstext3 {
+      height: 100%;
+      display: flex;
+      background-color: $redoverlay;
+      position: absolute;
+      color: white;
+      padding: 250px 60px 60px 60px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .flaskechardonnaypng {
+      height: 500px;
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+
+    /* VINE UNDERSIDE */
+
+    .fa-times {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+
+    }
+
+    .VINEdropdownlinks {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .VINEdropdownlinks a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .VINEcabernetsauvignont {
+      display: grid;
+      grid-row: 2;
+      grid-template-rows: 507px;
+      grid-template-columns: 1fr 2fr 1fr;
+      background: url("../images/grapes2.jpg") center no-repeat;
+    }
+
+    .VINEflaskecabernet {
+      display: flex;
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    .VINEtekstcabernet {
+      @include tekstplaceringweb;
+    }
+
+    .VINEdropdowncabernet {
+      display: flex;
+      grid-row: 1;
+      grid-column: 3;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .VINEdropdowncabernetclick {
+      /*color: white;
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      line-height: 16pt; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-family: Arial;
+      color: white;
+      background-color: $red;
+      border-radius: 2px;
+      border: none;
+      width: 150px;
+      height: 30px;
+    }
+
+    .VINEdropdowncabernetclick:hover {
+      background-color: $redhover;
+    }
+
+    .VINEdropdowncabernetcontent {
+      display: none;
+      font-family: Arial, sans-serif;
+      font-size: 0pt;
+      line-height: 0pt;
+      color: white;
+      height: 0;
+      width: 0;
+      position: absolute;
+      background-color: $red;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .VINEtempranillo {
+      display: grid;
+      grid-row: 3;
+      grid-template-rows: 507px;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .VINEflasketempranillo {
+      display: flex;
+      grid-row: 1;
+      grid-column: 3;
+    }
+
+    .VINEteksttempranillo {
+      @include tekstplaceringweb;
+    }
+
+    .VINEdropdowntempranillo {
+      display: flex;
+      grid-row: 1;
+      grid-column: 1;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .VINEdropdowntempranilloclick {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-family: Arial;
+      color: white;
+      background-color: $red;
+      border-radius: 2px;
+      border: none;
+      width: 150px;
+      height: 30px;
+    }
+
+    .VINEdropdowntempranilloclick:hover {
+      background-color: $redhover;
+    }
+
+    .VINEdropdowntempranillocontent {
+      display: none;
+      font-family: Arial, sans-serif;
+      font-size: 0pt;
+      line-height: 0pt;
+      color: white;
+      height: 0;
+      width: 0;
+      position: absolute;
+      background-color: $red;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .VINEchardonnay {
+      display: grid;
+      grid-row: 4;
+      grid-template-rows: 507px;
+      grid-template-columns: 1fr 2fr 1fr;
+      background: url("../images/grapes7.jpg") center no-repeat;
+    }
+
+    .VINEflaskechardonnay {
+      display: flex;
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    .VINEtekstchardonnay {
+      @include tekstplaceringweb;
+    }
+
+    .VINEdropdownchardonnay {
+      display: flex;
+      grid-row: 1;
+      grid-column: 3;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .VINEdropdownchardonnayclick {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-family: Arial;
+      color: white;
+      background-color: $red;
+      border-radius: 2px;
+      border: none;
+      width: 150px;
+      height: 30px;
+    }
+
+    .VINEdropdownchardonnayclick:hover {
+      background-color: $redhover;
+    }
+
+    .VINEdropdownchardonnaycontent {
+      display: none;
+      font-family: Arial, sans-serif;
+      font-size: 0pt;
+      line-height: 0pt;
+      color: white;
+      height: 0;
+      width: 0;
+      position: absolute;
+      background-color: $red;
+      justify-content: center;
+      align-items: center;
+    }
+    //Casper slut-----------------------------------------
   }
 
-  p {
-    font-size: 12pt;
-  }
+  /*Computerskærm*/
+  @media screen and (min-width: 1200px) {
+    body {
+      grid-template-rows: 150px auto auto auto auto 200px;
+    }
+
+    h1 {
+      font-size: 46pt;
+    }
+
+    //Oliver start---------------------------------------------------
+    .h_grid {
+      display: grid;
+      grid-template-columns: 1fr 5fr 4fr;
+      height: 130px;
+      padding-top: 0;
+    }
+
+    .h_logo {
+      grid-row: 1;
+      grid-column: 1;
+      background-size: cover;
+      height: 120px;
+      width: 200px;
+      margin: 6px 0 0 2px;
+    }
+
+    nav {
+      grid-column: 2;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .fa-bars {
+      color: #781616;
+    }
+
+    .dropdown_btn {
+      display: none;
+      position: absolute;
+      border: none;
+      outline: none;
+      background-color: inherit;
+      font-family: inherit;
+      right: 12px;
+      top: 1px;
+    }
+
+    .dropdown:hover .h_content {
+      display: flex;
+    }
+
+    .h_content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 40px;
+      position: static;
+      z-index: 3;
+      min-width: 0;
+      top: 0;
+      right: 0;
+      outline: 0;
+    }
+
+    .h_content:hover {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 40px;
+      position: static;
+      z-index: 3;
+      min-width: 0;
+      top: 0;
+      right: 0;
+    }
+
+    .h_subscribe {
+      grid-column: 3;
+      display: flex;
+      margin-top: 47px;
+      justify-content: center;
+    }
+
+    .h_placeholder {
+      height: 30px;
+      width: 300px;
+      outline: 5px auto #5d5d5d;
+    }
+
+    .h_placeholder input {
+      width: 100%;
+      height: 100%;
+      background-color: #d5d5d5;
+      color: #000000;
+      padding-left: 5px;
+      border: 0;
+      -webkit-appearance: none;
+    }
+    //Oliver slut-----------------------------------------------------------
+
+    //Sabine start-------------------------------------------------------
+    .dominio-grid h1 {
+      grid-row: 1;
+      grid-column: 1 / span 4;
+    }
 
-  //Cecilie start-----------------------------------------------------
-  .i_tekst {
-    width: 40%;
-    font-size: 20px;
-  }
-
-  .Forhandlere {
-    width: 20%;
-    float: left;
-    margin: 0;
-    margin-left: 15%;
-  }
-
-  .Nederst {
-    width: 40%;
-    float: right;
-    margin: 0;
-    margin-right: 15%;
-  }
-
-  .informationer {
-    float: right;
-    font-size: 13px;
-  }
-
-  .SoMe {
-    float: left;
-    font-size: 35px;
-  }
-
-  footer {
-    padding-top: 20px;
-  }
-  //Cecilie slut-----------------------------------------------------
-
-  //Sabine start---------------------------------------------------
-  .dominio-grid {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  //Sabine slut---------------------------------------------------
-
-  //Casper start---------------------------------------------------
-
-  #products {
-    grid-row: 3;
-    display: grid;
-    grid-template-rows: auto auto;
-  }
-
-  .productsgrid {
-    grid-row: 2;
-    display: grid;
-    grid-template-rows: 700px;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  #productstext1, #productstext2, #productstext3 {
-    display: none;
-  }
-
-  .productscabernet .productstempranillo .productschardonnay {
-    margin-top: 0px;
-  }
-
-  .mereomchardonnay, .mereomcabernetsauvignon, .mereomtempranillo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-family: Arial;
-    color: white;
-    background-color: $yellow;
-    border-radius: 2px;
-    border: none;
-    width: 230px;
-    height: 30px;
-    text-decoration: none;
-  }
-
-  .mereomchardonnay:hover, .mereomcabernetsauvignon:hover, .mereomtempranillo:hover {
-    background-color: $yellowhover;
-  }
-
-  .productscabernet {
-    grid-row: 1 / span 2;
-    grid-column: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .productscabernet:hover #productstext1 {
-    height: 100%;
-    display: flex;
-    background-color: $redoverlay;
-    position: absolute;
-    color: white;
-    padding: 250px 60px 60px 60px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flaskecabernetsauvignont {
-    height: 500px;
-    margin-top: 50px;
-    margin-bottom: 25px;
-  }
-
-  .productstempranillo {
-    grid-row: 1 / span 2;
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .productstempranillo:hover #productstext2 {
-    height: 100%;
-    display: flex;
-    background-color: $redoverlay;
-    position: absolute;
-    color: white;
-    padding: 250px 60px 60px 60px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flasketempranillo {
-    height: 500px;
-    margin-top: 50px;
-    margin-bottom: 25px;
-  }
-
-  .productschardonnay {
-    grid-row: 1 / span 2;
-    grid-column: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .productschardonnay:hover #productstext3 {
-    height: 100%;
-    display: flex;
-    background-color: $redoverlay;
-    position: absolute;
-    color: white;
-    padding: 250px 60px 60px 60px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flaskechardonnaypng {
-    height: 500px;
-    margin-top: 50px;
-    margin-bottom: 25px;
-  }
-
-  /* VINE UNDERSIDE */
-
-  .fa-times {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-
-  }
-
-  .VINEdropdownlinks {
-    display: flex;
-    flex-direction: column;
-  }
-
-.VINEdropdownlinks a {
-  text-decoration: none;
-  color: white;
-}
-
-  .VINEcabernetsauvignont {
-    display: grid;
-    grid-row: 2;
-    grid-template-rows: 507px;
-    grid-template-columns: 1fr 2fr 1fr;
-    background: url("../images/grapes2.jpg") center no-repeat;
-  }
-
-  .VINEflaskecabernet {
-    display: flex;
-    grid-row: 1;
-    grid-column: 1;
-  }
-
-  .VINEtekstcabernet {
-    @include tekstplaceringweb;
-  }
-
-  .VINEdropdowncabernet {
-    display: flex ;
-    grid-row: 1;
-    grid-column: 3;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .VINEdropdowncabernetclick {
-    /*color: white;
-    font-family: Arial, sans-serif;
-    font-size: 12pt;
-    line-height: 16pt; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-family: Arial;
-    color: white;
-    background-color: $red;
-    border-radius: 2px;
-    border: none;
-    width: 150px;
-    height: 30px;
-  }
-
-  .VINEdropdowncabernetclick:hover {
-    background-color: $redhover;
-  }
-
-  .VINEdropdowncabernetcontent {
-    display: none;
-    font-family: Arial, sans-serif;
-    font-size: 0pt;
-    line-height: 0pt;
-    color: white;
-    height: 0;
-    width: 0;
-    position: absolute;
-    background-color: $red;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .VINEtempranillo {
-    display: grid;
-    grid-row: 3;
-    grid-template-rows: 507px;
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-
-  .VINEflasketempranillo {
-    display: flex;
-    grid-row: 1;
-    grid-column: 3;
-  }
-
-  .VINEteksttempranillo {
-    @include tekstplaceringweb;
-  }
-
-  .VINEdropdowntempranillo {
-    display: flex ;
-    grid-row: 1;
-    grid-column: 1;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .VINEdropdowntempranilloclick {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-family: Arial;
-    color: white;
-    background-color: $red;
-    border-radius: 2px;
-    border: none;
-    width: 150px;
-    height: 30px;
-  }
-
-  .VINEdropdowntempranilloclick:hover {
-    background-color: $redhover;
-  }
-
-  .VINEdropdowntempranillocontent {
-    display: none;
-    font-family: Arial, sans-serif;
-    font-size: 0pt;
-    line-height: 0pt;
-    color: white;
-    height: 0;
-    width: 0;
-    position: absolute;
-    background-color: $red;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .VINEchardonnay {
-    display: grid;
-    grid-row: 4;
-    grid-template-rows: 507px;
-    grid-template-columns: 1fr 2fr 1fr;
-    background: url("../images/grapes7.jpg") center no-repeat;
-  }
-
-  .VINEflaskechardonnay {
-    display: flex;
-    grid-row: 1;
-    grid-column: 1;
-  }
-
-  .VINEtekstchardonnay {
-    @include tekstplaceringweb;
-  }
-
-  .VINEdropdownchardonnay {
-    display: flex ;
-    grid-row: 1;
-    grid-column: 3;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .VINEdropdownchardonnayclick {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-family: Arial;
-    color: white;
-    background-color: $red;
-    border-radius: 2px;
-    border: none;
-    width: 150px;
-    height: 30px;
-  }
-
-  .VINEdropdownchardonnayclick:hover {
-    background-color: $redhover;
-  }
-
-  .VINEdropdownchardonnaycontent {
-    display: none;
-    font-family: Arial, sans-serif;
-    font-size: 0pt;
-    line-height: 0pt;
-    color: white;
-    height: 0;
-    width: 0;
-    position: absolute;
-    background-color: $red;
-    justify-content: center;
-    align-items: center;
-  }
-  //Casper slut-----------------------------------------
-}
-
-/*Computerskærm*/
-@media screen and (min-width: 1200px) {
-body {
-  grid-template-rows: 150px auto auto auto auto 200px;
-}
-
-h1 {
-  font-size: 46pt;
-}
-
-//Oliver start---------------------------------------------------
-  .h_grid {
-    display: grid;
-    grid-template-columns: 1fr 5fr 4fr;
-    height: 130px;
-    padding-top: 0;
-  }
-
-  .h_logo {
-    grid-row: 1;
-    grid-column: 1;
-    background-size: cover;
-    height: 120px;
-    width: 200px;
-    margin: 6px 0 0 2px;
-  }
-
-  nav {
-    grid-column: 2;
-  }
-
-  .dropdown {
-    position: relative;
-  }
-
-  .fa-bars {
-    color: #781616;
-  }
-
-  .dropdown_btn {
-    display: none;
-    position: absolute;
-    border: none;
-    outline: none;
-    background-color: inherit;
-    font-family: inherit;
-    right: 12px;
-    top: 1px;
-  }
-
-  .dropdown:hover .h_content {
-    display: flex;
-  }
-
-  .h_content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 40px;
-    position: static;
-    z-index: 3;
-    min-width: 0;
-    top: 0;
-    right: 0;
-    outline: 0;
-  }
-
-  .h_content:hover {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 40px;
-    position: static;
-    z-index: 3;
-    min-width: 0;
-    top: 0;
-    right: 0;
-  }
-
-  .h_subscribe {
-    grid-column: 3;
-    display: flex;
-    margin-top: 47px;
-    justify-content: center;
-  }
-
-
-  .h_placeholder {
-    height: 30px;
-    width: 300px;
-    outline: 5px auto #5d5d5d;
-  }
-
-  .h_placeholder input {
-    width: 100%;
-    height: 100%;
-    background-color: #d5d5d5;
-    color: #000000;
-    padding-left: 5px;
-    border: 0;
-    -webkit-appearance: none;
-  }
-//Oliver slut-----------------------------------------------------------
-
-//Sabine start-------------------------------------------------------
-  .dominio-grid h1 {
-    grid-row: 1;
-    grid-column: 1 / span 4;
-  }
-  
     .p-mobile {
-    grid-column: 2 / span 2;
-  }
+      grid-column: 2 / span 2;
+    }
 
-  //Slideshow (Casper)
-  .slider-demo768og992 {
-    display: none;
-  }
+    //Slideshow (Casper)
+    .slider-demo768og992 {
+      display: none;
+    }
 
-  .slider-demo1200 {
-    display: grid;
-    grid-column: 2 / span 2;
-    height: auto;
-    width: auto;
-  }
+    .slider-demo1200 {
+      display: grid;
+      grid-column: 2 / span 2;
+      height: auto;
+      width: auto;
+    }
 
-//Oliver start-----------------------------------------------
-.his_grid {
-  display: grid;
-  grid-template-columns: 92px 1fr 92px;
-  grid-template-rows: 130px 140px 50px 180px;
-  height: 100%;
-  width: 100%;
-}
+    //Oliver start-----------------------------------------------
+    .his_grid {
+      display: grid;
+      grid-template-columns: 92px 1fr 92px;
+      grid-template-rows: 130px 140px 50px 180px;
+      height: 100%;
+      width: 100%;
+    }
 
-.his_head {
-  grid-column: 2;
-  grid-row: 1;
-}
-.his_head h1 {
-  color: #000000;
-}
+    .his_head {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .his_head h1 {
+      color: #000000;
+    }
 
-.his_help {
-  height: 100%;
-  width: 100%;
-}
+    .his_help {
+      height: 100%;
+      width: 100%;
+    }
 
-.his_text1 {
-  margin: 25px 200px;
-}
+    .his_text1 {
+      margin: 25px 200px;
+    }
 
-.his_text1 {
-  grid-column: 1;
-}
+    .his_text1 {
+      grid-column: 1;
+    }
 
-.his_text2 {
-  grid-column: 2;
-}
+    .his_text2 {
+      grid-column: 2;
+    }
 
-.his_pic_flex {
-  grid-column: 2;
-  grid-row: 4;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 15px 190px 20px 190px;
-}
+    .his_pic_flex {
+      grid-column: 2;
+      grid-row: 4;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 15px 190px 20px 190px;
+    }
 
-  .history_read {
-    grid-row: 3;
-  }
+    .history_read {
+      grid-row: 3;
+    }
 
-.his_text_flex {
-  grid-column: 2;
-  grid-row: 2;
-}
+    .his_text_flex {
+      grid-column: 2;
+      grid-row: 2;
+    }
 
-  .hu_grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-  }
+    .hu_grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+    }
 
-  .hu_text1 {
-    font-family: Arial;
-    font-size: 15px;
-    grid-column: 2/3;
-    padding-left: 150px;
-  }
+    .hu_text1 {
+      font-family: Arial;
+      font-size: 15px;
+      grid-column: 2/3;
+      padding-left: 150px;
+      margin-top: 18px;
+    }
 
     p {
       text-align: left;
@@ -1359,7 +1362,6 @@ h1 {
     }
 
     .hu_head {
-      padding-top: 15px;
     }
 
     .hu_pics {
@@ -1385,7 +1387,7 @@ h1 {
     .black {
       display: none;
       position: absolute;
-      height: 159%;
+      height: 162%;
       width: 100%;
       background-color: black;
       z-index: 11;
@@ -1443,6 +1445,7 @@ h1 {
       grid-column: 3 / span 3;
     }
   }
+
 //Fejl-404-side slut (Sabine)-----------------------------
 
 
